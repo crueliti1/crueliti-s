@@ -1,174 +1,94 @@
 <!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Инструкция продавца — MatveyCrueliti</title>
+border: none;
+cursor: pointer;
+font-size: 16px;
+background: #4fa3ff;
+color: #0f1116;
+transition: 0.3s;
+margin-top: 10px;
+}
+#themeToggle:hover {
+opacity: 0.8;
+}
+/* Light Theme */
+.light-theme {
+background: #ffffff;
+color: #000000;
+}
+.light-theme .container {
+background: #f3f3f3;
+border-color: #cccccc;
+}
+.light-theme header a {
+background: white;
+color: #0077cc;
+border-color: #0077cc;
+}
+/* Mobile */
+@media (max-width: 600px) {
+.container { padding: 20px; }
+header a { font-size: 16px; padding: 10px 18px; }
+}
+/* Theme Switch Styles */
+.theme-switch { display:flex; justify-content:center; margin-top:20px; }
+.theme-switch input { display:none; }
+.switch { width:60px; height:30px; background:#333; border-radius:50px; position:relative; cursor:pointer; transition:background .4s ease; display:flex; align-items:center; justify-content:space-between; padding:0 6px; font-size:16px; }
+.switch::after { content:""; position:absolute; top:3px; left:3px; width:24px; height:24px; background:white; border-radius:50%; transition:transform .35s ease; }
+.switch .sun, .switch .moon { z-index:2; pointer-events:none; }
+input:checked + .switch { background:#4fa3ff; }
+input:checked + .switch::after { transform:translateX(30px); }
+body { transition: background .4s ease, color .4s ease; }
+</style>
 
-  <style>
-    /* === СТИЛИ (всё внутри style, чтобы не печаталось) === */
-    :root{
-      --bg-dark:#0f1116;
-      --panel-dark:#1a1d23;
-      --accent:#4fa3ff;
-      --text-light:#e5e5e5;
-      --bg-light:#ffffff;
-      --panel-light:#f3f3f3;
-      --text-dark:#111;
-    }
 
-    html,body{margin:0;padding:0;height:100%;}
-    body{
-      font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
-      background:var(--bg-dark);
-      color:var(--text-light);
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      transition:background .25s,color .25s;
-    }
-
-    /* header */
-    header{
-      padding:24px 16px;
-      text-align:center;
-    }
-    header .logo{
-      width:88px;
-      height:88px;
-      border-radius:50%;
-      object-fit:cover;
-      display:block;
-      margin:0 auto 12px;
-      box-shadow:0 6px 18px rgba(0,0,0,0.45);
-    }
-
-    header .top-link{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      padding:12px 22px;
-      border-radius:12px;
-      border:2px solid var(--accent);
-      background:var(--panel-dark);
-      color:var(--accent);
-      text-decoration:none;
-      font-weight:600;
-      font-size:18px;
-      transition:transform .18s, background .18s, color .18s;
-      box-shadow:0 6px 18px rgba(0,0,0,0.35);
-    }
-    header .top-link img.icon { width:20px; height:20px; display:inline-block; }
-
-    header .top-link:hover{
-      transform:translateY(-3px);
-      background:var(--accent);
-      color:var(--bg-dark);
-    }
-
-    /* container */
-    .container{
-      max-width:920px;
-      margin:28px auto;
-      background:var(--panel-dark);
-      border-radius:14px;
-      padding:36px;
-      box-shadow:0 10px 30px rgba(0,0,0,0.5);
-      border:1px solid rgba(255,255,255,0.03);
-      line-height:1.7;
-    }
-
-    h1{margin:0 0 14px;font-size:26px;color:var(--accent);}
-    p{margin:12px 0;font-size:18px;}
-    a { color:var(--accent); font-weight:600; text-decoration:underline; }
-
-    .step {
-      margin:18px 0;
-      padding:16px;
-      border-radius:10px;
-      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02));
-      border:1px solid rgba(255,255,255,0.02);
-    }
-
-    .step b{color:var(--accent);}
-
-    /* theme toggle */
-    .controls{
-      text-align:center;
-      margin-top:6px;
-    }
-    #themeToggle{
-      cursor:pointer;
-      padding:10px 18px;
-      border-radius:10px;
-      border:none;
-      font-weight:600;
-      background:var(--accent);
-      color:var(--bg-dark);
-      box-shadow:0 6px 18px rgba(0,0,0,0.35);
-    }
-
-    /* light theme */
-    .light-theme{
-      background:var(--bg-light);
-      color:var(--text-dark);
-    }
-    .light-theme .container{ background:var(--panel-light); border-color: #ddd; color:var(--text-dark); }
-    .light-theme header .top-link{ background:var(--bg-light); color:#0077cc; border-color:#0077cc; }
-    .light-theme #themeToggle{ background:#0077cc; color:#fff; }
-
-    /* mobile */
-    @media (max-width:640px){
-      .container{ padding:20px; margin:16px; }
-      header .top-link{ font-size:16px; padding:10px 14px; }
-      h1{ font-size:20px; }
-      p{ font-size:16px; }
-    }
-  </style>
 </head>
 <body>
-  <header>
-    <!-- логотип (твой URL) -->
-    <img class="logo" src="https://i.pinimg.com/236x/76/50/37/7650375a6fecda5a83a182b53e28af5f.jpg" alt="logo">
+<header>
+<img src="https://i.pinimg.com/236x/76/50/37/7650375a6fecda5a83a182b53e28af5f.jpg" alt="logo">
+<a href="https://funpay.com/users/234497/" target="_blank">https://funpay.com/users/234497/</a>
+<div class="theme-switch">
+<input type="checkbox" id="themeToggle">
+<label for="themeToggle" class="switch">
+<span class="sun">☀️</span>
+<span class="moon">🌙</span>
+</label>
+</div>
+</header>
 
-    <!-- кнопка-ссылка с иконками FunPay/Twitch -->
-    <a class="top-link" href="https://funpay.com/users/234497/" target="_blank" rel="noopener">
-      <img class="icon" src="https://funpay.com/favicon.ico" alt="funpay">
-      https://funpay.com/users/234497/
-    </a>
 
-    <div class="controls">
-      <button id="themeToggle">Переключить тему</button>
-    </div>
-  </header>
+<div class="container">
+<h2>Инструкция продавца MatveyCrueliti</h2>
+<p>Добро пожаловать на инструкцию продавца MatveyCrueliti!</p>
 
-  <main class="container" role="main">
-    <h1>Инструкция продавца MatveyCrueliti</h1>
 
-    <div class="step">
-      <p>Добро пожаловать на инструкцию продавца <b>MatveyCrueliti</b>!</p>
+<p>Вам выдали данные от Twitch аккаунта. Переходим на сайт: <a href="https://www.twitch.tv/" target="_blank">https://www.twitch.tv/</a></p>
 
-      <p>Вам выдали данные от Twitch аккаунта. Переходим на сайт:
-        <img style="width:18px;vertical-align:middle;margin-left:8px;margin-right:6px;" src="https://static.twitchcdn.net/assets/favicon-32-e29e246c157142c94346.png" alt="twitch">
-        <a href="https://www.twitch.tv/" target="_blank" rel="noopener">https://www.twitch.tv/</a>
-      </p>
 
-      <p>Авторизация по данным, что я вам выдал — вводим логин и пароль, которые вы получили при покупке.</p>
+<p>Авторизация по данным, что я вам выдал — вводим логин и пароль, которые вы получили при покупке.</p>
 
-      <p>Далее переходим на страницу дропов:
-        <img style="width:18px;vertical-align:middle;margin-left:8px;margin-right:6px;" src="https://static.twitchcdn.net/assets/favicon-32-e29e246c157142c94346.png" alt="twitch">
-        <a href="https://www.twitch.tv/drops/inventory" target="_blank" rel="noopener">https://www.twitch.tv/drops/inventory</a>
-      </p>
 
-      <p>Под <b>любой нужной наградой</b> нажимаем кнопку «<b>Подключить</b>».</p>
+<p>Далее переходим на страницу дропов: <a href="https://www.twitch.tv/drops/inventory" target="_blank">https://www.twitch.tv/drops/inventory</a></p>
 
-      <p>Вас перебрасывает на страницу подключения, где вы просто следуете шагам.</p>
 
-      <p><b>Готово!</b> Теперь ожидайте наград в игре.</p>
-    </div>
-  </main>
+<p>Под <b>любой нужной наградой</b> нажимаем кнопку «<b>Подключить</b>».</p>
 
-  <script>
-    // переключатель темы
-    (function(){
-      const btn = document.getElementById('themeToggle');
-      btn
+
+<p>Вас перебрасывает на страницу подключения, где вы просто следуете шагам.</p>
+
+
+<p><b>Готово!</b> Теперь ожидайте наград в игре.</p>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded",()=>{
+const body=document.body;
+const toggle=document.getElementById("themeToggle");
+const saved=localStorage.getItem("theme");
+if(saved==="light"){ body.classList.add("light-theme"); toggle.checked=true; }
+toggle.addEventListener("change",()=>{
+if(toggle.checked){ body.classList.add("light-theme"); localStorage.setItem("theme","light"); }
+else{ body.classList.remove("light-theme"); localStorage.setItem("theme","dark"); }
+});
+});
+</script>
+</body>
+</html>
