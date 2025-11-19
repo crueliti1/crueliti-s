@@ -16,13 +16,13 @@ body {
 }
 
 <header>
-    <div class="header-inner">
+    <div class="header-wrapper">
 
-        <div class="logo-block">
+        <div class="logo">
             <img src="https://i.pinimg.com/236x/76/50/37/7650375a6fecda5a83a182b53e28af5f.jpg" alt="logo">
         </div>
 
-        <a class="profile-link" href="https://funpay.com/users/234497/" target="_blank">
+        <a class="funpay-btn" href="https://funpay.com/users/234497/" target="_blank">
             Профиль FunPay
         </a>
 
@@ -36,6 +36,7 @@ body {
 
     </div>
 </header>
+
 
 header img {
     width: 120px;
@@ -186,6 +187,72 @@ input:checked + .switch::after {
     }
 }
 </style>
+    /* HEADER */
+header {
+    width: 100%;
+    padding: 20px 0;
+}
+
+.header-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 40px;
+}
+
+/* LOGO */
+.logo img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* FUNPAY BUTTON */
+.funpay-btn {
+    background: #4fa3ff;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-size: 18px;
+    text-decoration: none;
+    transition: .3s ease;
+    font-weight: 600;
+}
+
+.funpay-btn:hover {
+    opacity: .8;
+}
+
+/* Theme switch container */
+.theme-switch {
+    display: flex;
+    align-items: center;
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+    .header-wrapper {
+        flex-direction: column;
+        gap: 15px;
+        padding: 0 20px;
+    }
+
+    .logo img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .funpay-btn {
+        font-size: 16px;
+        padding: 10px 18px;
+    }
+}
+
 </head>
 
 <body>
