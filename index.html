@@ -15,10 +15,27 @@ body {
     transition: background .4s ease, color .4s ease;
 }
 
-header {
-    text-align: center;
-    padding: 20px 0;
-}
+<header>
+    <div class="header-inner">
+
+        <div class="logo-block">
+            <img src="https://i.pinimg.com/236x/76/50/37/7650375a6fecda5a83a182b53e28af5f.jpg" alt="logo">
+        </div>
+
+        <a class="profile-link" href="https://funpay.com/users/234497/" target="_blank">
+            Профиль FunPay
+        </a>
+
+        <div class="theme-switch">
+            <input type="checkbox" id="themeToggle">
+            <label for="themeToggle" class="switch">
+                <span class="sun">☀️</span>
+                <span class="moon">🌙</span>
+            </label>
+        </div>
+
+    </div>
+</header>
 
 header img {
     width: 120px;
