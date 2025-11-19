@@ -2,76 +2,11 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<title>MatveyCrueliti — Инструкция</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Инструкция MatveyCrueliti</title>
 
 <style>
-    /* --- Улучшенная мобильная адаптация --- */
-
-@media (max-width: 600px) {
-
-    body {
-        padding: 0;
-    }
-
-    header {
-        margin-top: 10px;
-    }
-
-    header img {
-        width: 80px;      /* было 110px */
-    }
-
-    header a {
-        font-size: 14px;  /* было 18px */
-        padding: 8px 14px;
-        margin-top: 6px;
-    }
-
-    .container {
-        width: 92%;
-        padding: 18px;
-        margin-top: 20px;
-        border-radius: 10px;
-    }
-
-    h2 {
-        font-size: 20px;
-        margin-bottom: 10px;
-        text-align: center;
-    }
-
-    p {
-        font-size: 15px;
-        line-height: 1.45;
-    }
-
-    /* Миниатюрная версия переключателя темы */
-    .switch {
-        width: 48px;      /* было 60px */
-        height: 24px;     /* было 30px */
-        padding: 0 4px;
-        font-size: 13px;
-    }
-
-    .switch::after {
-        width: 18px;      /* было 24px */
-        height: 18px;     /* было 24px */
-        top: 3px;
-        left: 3px;
-    }
-
-    input:checked + .switch::after {
-        transform: translateX(22px); /* под новый размер */
-    }
-
-    .sun, .moon {
-        font-size: 12px;
-    }
-}
-
-
-/* --- СТИЛИ ПЕРЕНЕСЕНЫ ВНУТРЬ HEAD --- */
-
+/* GLOBAL STYLES */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -80,96 +15,51 @@ body {
     transition: background .4s ease, color .4s ease;
 }
 
-/* Контейнер */
-.container {
-    max-width: 700px;
-    margin: 40px auto;
-    background: #1a1d24;
-    padding: 30px;
-    border-radius: 12px;
-    border: 1px solid #2c2f36;
-    line-height: 1.6;
-}
-
-/* Шапка */
 header {
     text-align: center;
-    margin-top: 20px;
+    padding: 20px 0;
 }
 
 header img {
-    width: 110px;
-    border-radius: 50%;
+    width: 120px;
+    border-radius: 12px;
 }
 
 header a {
     display: inline-block;
     margin-top: 10px;
-    padding: 10px 22px;
-    border-radius: 50px;
     text-decoration: none;
-    border: 2px solid #4fa3ff;
-    color: #4fa3ff;
+    padding: 10px 20px;
+    background: #4fa3ff;
+    color: white;
+    border-radius: 8px;
     font-size: 18px;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 header a:hover {
-    background: #4fa3ff;
-    color: #0f1116;
+    opacity: 0.8;
 }
 
-/* --- Theme switch --- */
-
-.theme-switch { 
-    display:flex; 
-    justify-content:center; 
-    margin-top:20px; 
+/* CONTAINER */
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    background: #1a1d23;
+    padding: 30px;
+    border-radius: 16px;
+    line-height: 1.6;
+    font-size: 18px;
+    border: 1px solid #2e2e2e;
+    transition: background .4s ease, border .4s ease;
 }
 
-.theme-switch input { display:none; }
-
-.switch {
-    width:60px;
-    height:30px;
-    background:#333;
-    border-radius:50px;
-    position:relative;
-    cursor:pointer;
-    transition:background .4s ease;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:0 6px;
-    font-size:16px;
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.switch::after {
-    content:"";
-    position:absolute;
-    top:3px;
-    left:3px;
-    width:24px;
-    height:24px;
-    background:white;
-    border-radius:50%;
-    transition:transform .35s ease;
-}
-
-.switch .sun, .switch .moon {
-    z-index:2;
-    pointer-events:none;
-}
-
-input:checked + .switch {
-    background:#4fa3ff;
-}
-
-input:checked + .switch::after {
-    transform:translateX(30px);
-}
-
-/* Светлая тема */
+/* LIGHT THEME */
 .light-theme {
     background: #ffffff;
     color: #000000;
@@ -183,26 +73,109 @@ input:checked + .switch::after {
 .light-theme header a {
     background: white;
     color: #0077cc;
-    border-color: #0077cc;
+    border: 1px solid #0077cc;
 }
 
-/* Мобильная версия */
+/* THEME SWITCH (SLIDER) */
+.theme-switch {
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.switch {
+    width: 60px;
+    height: 30px;
+    background: #333;
+    border-radius: 40px;
+    position: relative;
+    cursor: pointer;
+    padding: 0 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background .4s ease;
+    font-size: 16px;
+}
+
+.switch::after {
+    content: "";
+    width: 24px;
+    height: 24px;
+    background: white;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    border-radius: 50%;
+    transition: transform .35s ease;
+}
+
+.sun, .moon {
+    pointer-events: none;
+}
+
+/* checked */
+input:checked + .switch {
+    background: #4fa3ff;
+}
+
+input:checked + .switch::after {
+    transform: translateX(30px);
+}
+
+/* MOBILE ADAPTATION */
 @media (max-width: 600px) {
-    .container { padding: 20px; }
-    header a { font-size: 16px; padding: 10px 18px; }
+    header img {
+        width: 80px;
+    }
+
+    header a {
+        font-size: 14px;
+        padding: 8px 14px;
+    }
+
+    .container {
+        width: 92%;
+        padding: 18px;
+        font-size: 16px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .switch {
+        width: 48px;
+        height: 24px;
+        font-size: 12px;
+        padding: 0 4px;
+    }
+
+    .switch::after {
+        width: 18px;
+        height: 18px;
+    }
+
+    input:checked + .switch::after {
+        transform: translateX(22px);
+    }
+
+    .sun, .moon {
+        font-size: 12px;
+    }
 }
-
 </style>
-
 </head>
-<body>
 
+<body>
 <header>
     <img src="https://i.pinimg.com/236x/76/50/37/7650375a6fecda5a83a182b53e28af5f.jpg" alt="logo">
 
-    <a href="https://funpay.com/users/234497/" target="_blank">
-        https://funpay.com/users/234497/
-    </a>
+    <a href="https://funpay.com/users/234497/" target="_blank">Профиль FunPay</a>
 
     <div class="theme-switch">
         <input type="checkbox" id="themeToggle">
@@ -214,31 +187,33 @@ input:checked + .switch::after {
 </header>
 
 <div class="container">
-<h2>Инструкция продавца MatveyCrueliti</h2>
+    <h2>Инструкция продавца MatveyCrueliti</h2>
 
-<p>Добро пожаловать на инструкцию продавца MatveyCrueliti!</p>
+    <p>Добро пожаловать на инструкцию продавца MatveyCrueliti!</p>
 
-<p>Вам выдали данные от Twitch аккаунта. Переходим на сайт: 
-<a href="https://www.twitch.tv/" target="_blank">https://www.twitch.tv/</a></p>
+    <p>Вам выдали данные от Twitch аккаунта. Переходим на сайт: 
+        <a href="https://www.twitch.tv/" target="_blank">https://www.twitch.tv/</a>
+    </p>
 
-<p>Авторизация по данным, что я вам выдал — вводим логин и пароль, которые вы получили при покупке.</p>
+    <p>Авторизация по данным, что я вам выдал — вводим логин и пароль, которые вы получили при покупке.</p>
 
-<p>Далее переходим на страницу дропов: 
-<a href="https://www.twitch.tv/drops/inventory" target="_blank">https://www.twitch.tv/drops/inventory</a></p>
+    <p>Далее переходим на страницу дропов: 
+        <a href="https://www.twitch.tv/drops/inventory" target="_blank">https://www.twitch.tv/drops/inventory</a>
+    </p>
 
-<p>Под <b>любой нужной наградой</b> нажимаем кнопку «<b>Подключить</b>».</p>
+    <p>Под <b>любой нужной наградой</b> нажимаем кнопку «<b>Подключить</b>».</p>
 
-<p>Вас перебрасывает на страницу подключения, где вы просто следуете шагам.</p>
+    <p>Вас перебрасывает на страницу подключения, где вы просто следуете шагам.</p>
 
-<p><b>Готово!</b> Теперь ожидайте наград в игре.</p>
+    <p><b>Готово!</b> Теперь ожидайте наград в игре.</p>
 </div>
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
     const body = document.body;
     const toggle = document.getElementById("themeToggle");
-    const saved = localStorage.getItem("theme");
 
+    const saved = localStorage.getItem("theme");
     if (saved === "light") {
         body.classList.add("light-theme");
         toggle.checked = true;
