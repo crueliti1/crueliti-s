@@ -1,45 +1,75 @@
 <!DOCTYPE html>
-<html lang="ru">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Инструкция продавца</title>
-<style>
-body {
-font-family: Arial, sans-serif;
-margin: 0;
-padding: 0;
-background: #f5f5f5;
-color: #333;
-}
-header {
-background: #2b6cb0;
-color: white;
-padding: 20px;
-text-align: center;
-font-size: 24px;
-}
-header a {
-color: white;
 text-decoration: none;
-font-weight: bold;
+transition: 0.3s;
+background: #1a1d23;
+animation: pulse 2s infinite;
+}
+header a:hover {
+background: #4fa3ff;
+color: #0f1116;
+}
+@keyframes pulse {
+0% { transform: scale(1); }
+50% { transform: scale(1.05); }
+100% { transform: scale(1); }
 }
 .container {
-max-width: 800px;
+max-width: 900px;
 margin: 30px auto;
-background: white;
-padding: 30px;
-border-radius: 12px;
-box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-line-height: 1.6;
+background: #1a1d23;
+padding: 40px;
+border-radius: 16px;
+box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+line-height: 1.7;
+border: 1px solid #2a2f3a;
 }
 h2 {
-margin-top: 20px;
+border-left: 4px solid #4fa3ff;
+padding-left: 10px;
+}
+.icon {
+width: 20px;
+vertical-align: middle;
+margin-right: 6px;
+}
+#themeToggle {
+padding: 10px 20px;
+border-radius: 10px;
+border: none;
+cursor: pointer;
+font-size: 16px;
+background: #4fa3ff;
+color: #0f1116;
+transition: 0.3s;
+margin-top: 10px;
+}
+#themeToggle:hover {
+opacity: 0.8;
+}
+/* Light Theme */
+.light-theme {
+background: #ffffff;
+color: #000000;
+}
+.light-theme .container {
+background: #f3f3f3;
+border-color: #cccccc;
+}
+.light-theme header a {
+background: white;
+color: #0077cc;
+border-color: #0077cc;
+}
+/* Mobile */
+@media (max-width: 600px) {
+.container { padding: 20px; }
+header a { font-size: 16px; padding: 10px 18px; }
 }
 </style>
 </head>
 <body>
 <header>
+<img src="https://i.pinimg.com/236x/76/50/37/7650375a6fecda5a83a182b53e28af5f.jpg" alt="logo">
 <a href="https://funpay.com/users/234497/" target="_blank">https://funpay.com/users/234497/</a>
 </header>
 
