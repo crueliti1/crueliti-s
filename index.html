@@ -102,4 +102,95 @@ input:checked + .switch {
 }
 
 input:checked + .switch::after {
-    tra
+    transform:translateX(30px);
+}
+
+/* Светлая тема */
+.light-theme {
+    background: #ffffff;
+    color: #000000;
+}
+
+.light-theme .container {
+    background: #f3f3f3;
+    border-color: #cccccc;
+}
+
+.light-theme header a {
+    background: white;
+    color: #0077cc;
+    border-color: #0077cc;
+}
+
+/* Мобильная версия */
+@media (max-width: 600px) {
+    .container { padding: 20px; }
+    header a { font-size: 16px; padding: 10px 18px; }
+}
+
+</style>
+
+</head>
+<body>
+
+<header>
+    <img src="https://i.pinimg.com/236x/76/50/37/7650375a6fecda5a83a182b53e28af5f.jpg" alt="logo">
+
+    <a href="https://funpay.com/users/234497/" target="_blank">
+        https://funpay.com/users/234497/
+    </a>
+
+    <div class="theme-switch">
+        <input type="checkbox" id="themeToggle">
+        <label for="themeToggle" class="switch">
+            <span class="sun">☀️</span>
+            <span class="moon">🌙</span>
+        </label>
+    </div>
+</header>
+
+<div class="container">
+<h2>Инструкция продавца MatveyCrueliti</h2>
+
+<p>Добро пожаловать на инструкцию продавца MatveyCrueliti!</p>
+
+<p>Вам выдали данные от Twitch аккаунта. Переходим на сайт: 
+<a href="https://www.twitch.tv/" target="_blank">https://www.twitch.tv/</a></p>
+
+<p>Авторизация по данным, что я вам выдал — вводим логин и пароль, которые вы получили при покупке.</p>
+
+<p>Далее переходим на страницу дропов: 
+<a href="https://www.twitch.tv/drops/inventory" target="_blank">https://www.twitch.tv/drops/inventory</a></p>
+
+<p>Под <b>любой нужной наградой</b> нажимаем кнопку «<b>Подключить</b>».</p>
+
+<p>Вас перебрасывает на страницу подключения, где вы просто следуете шагам.</p>
+
+<p><b>Готово!</b> Теперь ожидайте наград в игре.</p>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const body = document.body;
+    const toggle = document.getElementById("themeToggle");
+    const saved = localStorage.getItem("theme");
+
+    if (saved === "light") {
+        body.classList.add("light-theme");
+        toggle.checked = true;
+    }
+
+    toggle.addEventListener("change", () => {
+        if (toggle.checked) {
+            body.classList.add("light-theme");
+            localStorage.setItem("theme", "light");
+        } else {
+            body.classList.remove("light-theme");
+            localStorage.setItem("theme", "dark");
+        }
+    });
+});
+</script>
+
+</body>
+</html>
