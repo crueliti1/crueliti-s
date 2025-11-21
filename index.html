@@ -1,193 +1,105 @@
+<!-- FULL HTML WITH LANGUAGE SWITCH + FLAGS -->
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Инструкция продавца MatveyCrueliti</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Инструкция продавца</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #1a1a1a;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+    }
 
-    <style>
-        body {
-            margin: 0;
-            background-color: #1c1c1c;
-            color: #ffffff;
-            font-family: Arial, sans-serif;
-        }
+    .container {
+        max-width: 1100px;
+        margin: 40px auto;
+        background: #2a2a2a;
+        padding: 30px;
+        border-radius: 15px;
+    }
 
-        header {
-            width: 100%;
-            background: #111;
-            padding: 15px 30px;
-            box-sizing: border-box;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    h1 {
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
 
-        .logo-box {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
+    .seller-name {
+        background: #7c52ff;
+        padding: 5px 15px;
+        border-radius: 10px;
+        font-size: 22px;
+        display: inline-block;
+        margin-left: 10px;
+    }
 
-        .logo-box img {
-            height: 40px;
-            width: auto;
-            border-radius: 6px;
-        }
+    .warning {
+        background: #b30000;
+        padding: 15px;
+        border-radius: 10px;
+        font-weight: bold;
+        margin: 20px 0;
+        font-size: 18px;
+    }
 
-        .logo-text {
-            font-size: 20px;
-            font-weight: bold;
-        }
 
-        .funpay-btn, .lang-btn {
-            background: #a285ff;
-            padding: 10px 20px;
-            border-radius: 8px;
-            color: white;
-            text-decoration: none;
-            font-size: 16px;
-            transition: 0.3s;
-            margin-left: 10px;
-        }
+    /* LANGUAGE BUTTON */
+    .lang-button {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: #2a2a2a;
+        border: none;
+        padding: 8px 14px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 22px;
+        transition: 0.2s ease;
+    }
 
-        .funpay-btn:hover, .lang-btn:hover {
-            background: #c6b7ff;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 40px auto;
-            background: #242424;
-            padding: 50px 30px 30px 30px;
-            border-radius: 12px;
-            box-sizing: border-box;
-        }
-
-        .title-wrapper {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .title {
-            font-size: 32px;
-            font-weight: bold;
-        }
-
-        .name-box {
-            background: #7d5bff;
-            padding: 6px 14px;
-            font-size: 24px;
-            border-radius: 8px;
-        }
-
-        /* 🔥 ФИКС ДЛЯ КРАСНОГО ПРЕДУПРЕЖДЕНИЯ 🔥 */
-        .warning {
-            background: #a30000;
-            padding: 12px 18px;
-            margin-top: 20px;
-            margin-bottom: 25px;
-            border-radius: 8px;
-            color: #fff;
-            font-weight: bold;
-            line-height: 1.5;
-            white-space: normal;
-            word-wrap: break-word;
-            display: block;        /* ← фикс отображения */
-        }
-
-        img.guide-img {
-            width: 100%;
-            max-width: 520px;
-            border-radius: 10px;
-            margin: 25px 0;
-            border: 2px solid #555;
-            display: block;
-        }
-
-        a {
-            color: #8c74ff;
-        }
-    </style>
+    .lang-button:hover {
+        transform: scale(1.08);
+        background: #3a3a3a;
+    }
+</style>
 </head>
 <body>
 
-<header>
-    <div class="logo-box">
-        <img src="https://raw.githubusercontent.com/crueliti1/crueliti-s/main/9541cc3fcd847f455b1885a7acd7f182.jpg" alt="logo">
-        <div class="logo-text">MatveyCrueliti</div>
-    </div>
-
-    <div style="display:flex; align-items:center;">
-        <a class="funpay-btn" href="https://funpay.com/users/234497/" target="_blank">Профиль FunPay</a>
-        <a class="lang-btn" href="#" onclick="switchLang()">EN / RU</a>
-    </div>
-</header>
+<button id="langBtn" onclick="switchLang()" class="lang-button">
+    <span id="langFlag">🇷🇺</span>
+</button>
 
 <div class="container">
+    <h1 data-ru="Инструкция продавца" data-en="Seller Instructions">
+        Инструкция продавца
+    </h1>
 
-    <div class="title-wrapper">
-        <div class="title" data-ru="Инструкция продавца" data-en="Seller Instructions">Инструкция продавца</div>
-        <div class="name-box">MatveyCrueliti</div>
+    <div class="seller-name" data-ru="MatveyCrueliti" data-en="MatveyCrueliti">
+        MatveyCrueliti
     </div>
 
-    <div class="warning"
-        data-ru="ВНИМАНИЕ, ЕСЛИ НА ТВИЧЕ НЕТ НАГРАД, ЭТО НЕ ЗНАЧИТ ЧТО ИХ НЕТ ВОВСЕ!  
-У ТВИЧА СТРОГИЕ ПРАВИЛА: ЕСЛИ НАГРАДА БЫЛА ПОЛУЧЕНА БОЛЕЕ 6 МЕСЯЦЕВ НАЗАД —  
-ЕЁ ВИЗУАЛЬНО СКРЫВАЮТ, НО ОНА ВСЁ РАВНО ЕСТЬ!  
-НЕ ПИШИТЕ ЧТО НАГРАДЫ НЕТ И НЕ ПОРТИТЕ РЕЙТИНГ ПРОДАВЦА!  
-ИНАЧЕ В ОБСЛУЖИВАНИИ БУДЕТ ОТКАЗАНО. УВАЖАЙТЕ ЧУЖОЙ ТРУД!"
-        data-en="WARNING: IF THERE ARE NO REWARDS ON TWITCH, IT DOES NOT MEAN THEY DON'T EXIST!  
-TWITCH HAS STRICT RULES: IF A REWARD WAS RECEIVED MORE THAN 6 MONTHS AGO,  
-IT IS HIDDEN VISUALLY, BUT IT STILL EXISTS!  
-DO NOT CLAIM THAT THERE IS NO REWARD AND DO NOT DAMAGE THE SELLER'S RATING!  
-OTHERWISE SERVICE WILL BE REFUSED. RESPECT OTHER PEOPLE’S WORK!">
+    <div class="warning" data-ru="ВНИМАНИЕ, ЕСЛИ НА ТВИЧЕ НЕТ НАГРАД, ЭТО НЕ ЗНАЧИТ ЧТО ИХ НЕТ ВОВСЕ!" 
+    data-en="WARNING: IF THERE ARE NO REWARDS ON TWITCH, IT DOES NOT MEAN THEY DO NOT EXIST!">
         ВНИМАНИЕ, ЕСЛИ НА ТВИЧЕ НЕТ НАГРАД, ЭТО НЕ ЗНАЧИТ ЧТО ИХ НЕТ ВОВСЕ!
     </div>
 
-    <p data-ru="Добро пожаловать на инструкцию продавца MatveyCrueliti!"
-       data-en="Welcome to the seller instructions of MatveyCrueliti!">
-       Добро пожаловать на инструкцию продавца MatveyCrueliti!
+    <p data-ru="Добро пожаловать на инструкцию продавца MatveyCrueliti!" 
+       data-en="Welcome to the seller instructions for MatveyCrueliti!">
+        Добро пожаловать на инструкцию продавца MatveyCrueliti!
     </p>
 
-    <p data-ru="Вам выдали данные от Twitch аккаунта. Переходим на сайт:" 
-       data-en="You received Twitch account details. Go to the website:">
-        Вам выдали данные от Twitch аккаунта. Переходим на сайт:
-        <a href="https://www.twitch.tv/" target="_blank">https://www.twitch.tv/</a>
+    <p data-ru="Вам выдали данные от Twitch аккаунта. Переходим на сайт: https://www.twitch.tv/" 
+       data-en="You have received Twitch account data. Go to: https://www.twitch.tv/">
+        Вам выдали данные от Twitch аккаунта. Переходим на сайт: https://www.twitch.tv/
     </p>
 
-    <p data-ru="Авторизация по данным — вводим логин и пароль, которые вы получили при покупке."
-       data-en="Log in using the username and password you received after purchase.">
-       Авторизация по данным — вводим логин и пароль, которые вы получили при покупке.
+    <p data-ru="Авторизация по данным — вводим логин и пароль, которые вы получили при покупке." 
+       data-en="Log in using the username and password you received with the purchase.">
+        Авторизация по данным — вводим логин и пароль, которые вы получили при покупке.
     </p>
-
-    <img class="guide-img" src="https://raw.githubusercontent.com/crueliti1/crueliti-s/main/a1.jpg" alt="Авторизация">
-
-    <p data-ru="Далее переходим на страницу дропов:"
-       data-en="Next, go to the drops page:">
-        Далее переходим на страницу дропов:
-        <a href="https://www.twitch.tv/drops/inventory" target="_blank">https://www.twitch.tv/drops/inventory</a>
-    </p>
-
-    <p data-ru="Под любой нужной наградой нажимаем кнопку «Подключить»."
-       data-en='Under any desired reward, click the “Connect” button.'>
-       Под любой нужной наградой нажимаем кнопку «Подключить».
-    </p>
-
-    <img class="guide-img" src="https://raw.githubusercontent.com/crueliti1/crueliti-s/main/a2.jpg" alt="Drops">
-
-    <p data-ru="Вас перебрасывает на страницу подключения — следуйте шагам."
-       data-en="You will be redirected to the linking page — follow the steps.">
-       Вас перебрасывает на страницу подключения — следуйте шагам.
-    </p>
-
-    <p data-ru="Готово! Теперь ожидайте наград в игре."
-       data-en="Done! Now wait for the rewards to appear in the game.">
-       Готово! Теперь ожидайте наград в игре.
-    </p>
-
 </div>
 
 <script>
@@ -201,12 +113,13 @@ function switchLang() {
     });
 
     document.documentElement.lang = lang;
+
+    document.getElementById("langFlag").textContent = (lang === "ru") ? "🇷🇺" : "🇬🇧";
 }
-    
-/* 🔥 ФИКС НАЧАЛЬНОГО ОТОБРАЖЕНИЯ 🔥 */
-switchLang();  
+
+// FIX INITIAL COLLAPSE
 switchLang();
-    
+switchLang();
 </script>
 
 </body>
