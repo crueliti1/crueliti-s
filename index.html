@@ -86,7 +86,6 @@
             border-radius: 8px;
         }
 
-        /* Полностью исправленный блок предупреждения */
         .warning {
             background: #a30000;
             padding: 12px 18px;
@@ -96,7 +95,7 @@
             color: #fff;
             font-weight: bold;
             line-height: 1.5;
-            white-space: pre-line; /* ← ключевой фикс */
+            white-space: pre-line;
             word-wrap: break-word;
         }
 
@@ -125,15 +124,8 @@
     <div style="display:flex; align-items:center;">
         <a class="funpay-btn" href="https://funpay.com/users/234497/" target="_blank">Профиль FunPay</a>
 
-        <!-- 🇷🇺 КНОПКА -->
-        <a class="lang-btn" href="#" onclick="setLang('ru')">
-            🇷🇺 Русский
-        </a>
-
-        <!-- 🇺🇸 КНОПКА -->
-        <a class="lang-btn" href="#" onclick="setLang('en')">
-            🇺🇸 English
-        </a>
+        <a class="lang-btn" href="#" onclick="setLang('ru')">🇷🇺 Русский</a>
+        <a class="lang-btn" href="#" onclick="setLang('en')">🇺🇸 English</a>
     </div>
 </header>
 
@@ -155,48 +147,40 @@ TWITCH HAS STRICT RULES: IF A REWARD WAS RECEIVED MORE THAN 6 MONTHS AGO,
 IT IS HIDDEN VISUALLY, BUT IT STILL EXISTS!
 DO NOT CLAIM THAT THERE IS NO REWARD AND DO NOT DAMAGE THE SELLER'S RATING!
 OTHERWISE SERVICE WILL BE REFUSED. RESPECT OTHER PEOPLE’S WORK!">
-        ВНИМАНИЕ, ЕСЛИ НА ТВИЧЕ НЕТ НАГРАД, ЭТО НЕ ЗНАЧИТ ЧТО ИХ НЕТ ВОВСЕ!
     </div>
 
     <p data-ru="Добро пожаловать на инструкцию продавца MatveyCrueliti!"
        data-en="Welcome to the seller instructions of MatveyCrueliti!">
-       Добро пожаловать на инструкцию продавца MatveyCrueliti!
     </p>
 
     <p data-ru="Вам выдали данные от Twitch аккаунта. Переходим на сайт:" 
        data-en="You received Twitch account details. Go to the website:">
-        Вам выдали данные от Twitch аккаунта. Переходим на сайт:
         <a href="https://www.twitch.tv/" target="_blank">https://www.twitch.tv/</a>
     </p>
 
     <p data-ru="Авторизация по данным — вводим логин и пароль, которые вы получили при покупке."
        data-en="Log in using the username and password you received after purchase.">
-       Авторизация по данным — вводим логин и пароль, которые вы получили при покупке.
     </p>
 
     <img class="guide-img" src="https://raw.githubusercontent.com/crueliti1/crueliti-s/main/a1.jpg" alt="Авторизация">
 
     <p data-ru="Далее переходим на страницу дропов:"
        data-en="Next, go to the drops page:">
-        Далее переходим на страницу дропов:
         <a href="https://www.twitch.tv/drops/inventory" target="_blank">https://www.twitch.tv/drops/inventory</a>
     </p>
 
     <p data-ru="Под любой нужной наградой нажимаем кнопку «Подключить»."
        data-en="Under any desired reward, click the “Connect” button.">
-       Под любой нужной наградой нажимаем кнопку «Подключить».
     </p>
 
     <img class="guide-img" src="https://raw.githubusercontent.com/crueliti1/crueliti-s/main/a2.jpg" alt="Drops">
 
     <p data-ru="Вас перебрасывает на страницу подключения — следуйте шагам."
        data-en="You will be redirected to the linking page — follow the steps.">
-       Вас перебрасывает на страницу подключения — следуйте шагам.
     </p>
 
     <p data-ru="Готово! Теперь ожидайте наград в игре."
        data-en="Done! Now wait for the rewards to appear in the game.">
-       Готово! Теперь ожидайте наград в игре.
     </p>
 
 </div>
@@ -209,6 +193,9 @@ function setLang(lang) {
         el.innerHTML = el.getAttribute("data-" + lang);
     });
 }
+
+// Автоматически включаем русский при загрузке
+setLang('ru');
 </script>
 
 </body>
