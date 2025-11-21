@@ -21,6 +21,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
         }
 
         .logo-box {
@@ -52,6 +54,7 @@
             display: flex;
             align-items: center;
             gap: 6px;
+            white-space: nowrap;
         }
 
         .funpay-btn:hover, .lang-btn:hover {
@@ -124,6 +127,91 @@
             border: 1px solid #6d59c9;
             box-shadow: 0 0 10px rgba(125, 91, 255, 0.25);
         }
+
+
+        /* ------------- АДАПТИВ ДЛЯ МОБИЛОК ------------- */
+
+        @media (max-width: 600px) {
+            header {
+                padding: 12px 16px;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .funpay-btn, .lang-btn {
+                margin-left: 0;
+                margin-top: 8px;
+                width: 100%;
+                justify-content: center;
+                font-size: 15px;
+                padding: 10px;
+            }
+
+            .logo-box img {
+                height: 34px;
+            }
+
+            .logo-text {
+                font-size: 18px;
+            }
+
+            .container {
+                margin: 20px 10px;
+                padding: 20px;
+            }
+
+            .title {
+                font-size: 26px;
+            }
+
+            .name-box {
+                font-size: 20px;
+                padding: 5px 12px;
+            }
+
+            .info-block {
+                font-size: 15px;
+                padding: 16px;
+            }
+
+            .warning {
+                font-size: 15px;
+                padding: 14px;
+            }
+
+            img.guide-img {
+                max-width: 100%;
+            }
+
+            p {
+                font-size: 16px;
+                line-height: 1.55;
+            }
+        }
+
+        /* Адаптация до 400px — для очень маленьких экранов (iPhone SE и т.п.) */
+        @media (max-width: 400px) {
+            .title {
+                font-size: 22px;
+            }
+
+            .name-box {
+                font-size: 18px;
+            }
+
+            .funpay-btn, .lang-btn {
+                font-size: 14px;
+            }
+
+            p {
+                font-size: 15px;
+            }
+
+            .info-block, .warning {
+                font-size: 14px;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -134,11 +222,13 @@
         <div class="logo-text">MatveyCrueliti</div>
     </div>
 
-    <div style="display:flex; align-items:center;">
+    <div style="display:flex; flex-direction:column; align-items:stretch; width:100%; max-width:260px;">
         <a class="funpay-btn" href="https://funpay.com/users/234497/" target="_blank">Профиль FunPay</a>
 
-        <a class="lang-btn" href="#" onclick="setLang('ru')">🇷🇺 Русский</a>
-        <a class="lang-btn" href="#" onclick="setLang('en')">🇺🇸 English</a>
+        <div style="display:flex; gap:8px; margin-top:10px;">
+            <a class="lang-btn" style="flex:1;" href="#" onclick="setLang('ru')">🇷🇺 Русский</a>
+            <a class="lang-btn" style="flex:1;" href="#" onclick="setLang('en')">🇺🇸 English</a>
+        </div>
     </div>
 </header>
 
@@ -205,27 +295,27 @@ SERVICE MAY BE REFUSED. RESPECT OTHER PEOPLE’S WORK!">
     </p>
 
     <div class="info-block"
-         data-ru="Абсолютно все товары безопасны к использованию и за них НЕ может быть наложено внутриигровых санкций на ваш аккаунт, это просто привязка твича."
-         data-en="All products are completely safe to use and cannot result in any in-game sanctions on your account. It is simply a Twitch linking process.">
+         data-ru="Абсолютно все товары безопасны к использованию..."
+         data-en="All products are completely safe to use...">
         Абсолютно все товары безопасны к использованию и за них НЕ может быть наложено внутриигровых санкций на ваш аккаунт, это просто привязка твича.
     </div>
 
     <div class="info-block"
-         data-ru="При попытке обмана продавца или попытке занизить отзыв из-за собственной невнимательности, вранья или личной выгоды — вы будете добавлены в Чёрный Список. Все предметы, полученные вами с TWITCH аккаунта, будут откачены поддержкой твича. Подумайте дважды! Также вам будет полностью отказано в дальнейшем обслуживании."
-         data-en="If you attempt to deceive the seller or leave a lowered review due to your own inattention, dishonesty, or personal benefit — you will be added to the Blacklist. All items obtained from the TWITCH account will be revoked by Twitch support. Think twice! Further service will also be refused.">
-        При попытке обмана продавца или попытке занизить отзыв из-за собственной невнимательности, вранья или личной выгоды — вы будете добавлены в Чёрный Список. Все предметы, полученные вами с TWITCH аккаунта, будут откачены поддержкой твича. Подумайте дважды! Также вам будет полностью отказано в дальнейшем обслуживании.
+         data-ru="При попытке обмана продавца..."
+         data-en="If you attempt to deceive the seller...">
+        При попытке обмана продавца или попытке занизить отзыв из-за собственной невнимательности...
     </div>
 
     <div class="info-block"
-         data-ru="Если у вас возникли какие-то проблемы, вызовите продавца и дождитесь — не нужно сразу писать негативный отзыв или в поддержку. В 99% случаев проблемы возникают из-за невнимательности к инструкции. Прочитайте всё внимательно. Если вопросы остались — спросите."
-         data-en="If you encounter any problems, call the seller and wait — do not rush to leave a negative review or contact support. In 99% of cases, issues occur due to ignoring the instructions. Read everything carefully. If you still have questions — ask.">
-        Если у вас возникли какие-то проблемы, вызовите продавца и дождитесь — не нужно сразу писать негативный отзыв или в поддержку. В 99% случаев проблемы возникают из-за невнимательности к инструкции. Прочитайте всё внимательно. Если вопросы остались — спросите.
+         data-ru="Если у вас возникли проблемы..."
+         data-en="If you encounter any problems...">
+        Если у вас возникли какие-то проблемы, вызовите продавца и дождитесь...
     </div>
 
     <div class="info-block"
-         data-ru="Аккаунты выдаются в одни руки. Все они разные и не повторяются. После покупки твич-аккаунт остаётся вашим навсегда. ДА, КАЖДЫЙ ТВИЧ — КАЖДОМУ ПОКУПАТЕЛЮ! НЕ пытайтесь обмануть продавца фразой «Уже кто-то залутал награды». Такого быть НЕ может!"
-         data-en="Each account is issued to only one person. All accounts are unique and never repeated. After purchase, the Twitch account is yours forever. YES — EACH TWITCH FOR EACH BUYER! Do NOT try to deceive the seller with claims like “Someone already claimed the rewards”. This is NOT possible!">
-        Аккаунты выдаются в одни руки. Все они разные и не повторяются. После покупки твич-аккаунт остаётся вашим навсегда. ДА, КАЖДЫЙ ТВИЧ — КАЖДОМУ ПОКУПАТЕЛЮ! НЕ пытайтесь обмануть продавца фразой «Уже кто-то залутал награды». Такого быть НЕ может!
+         data-ru="Аккаунты выдаются в одни руки..."
+         data-en="Each account is issued to only one person...">
+        Аккаунты выдаются в одни руки. После покупки твич-аккаунт остаётся вашим навсегда...
     </div>
 
 </div>
