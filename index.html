@@ -1,245 +1,65 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Инструкция продавца</title>
-
-<style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #0f1116;
-    color: #fff;
-    transition: background 0.4s ease, color 0.4s ease;
-}
-
-/* HEADER */
-header {
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.header-left {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-header img.logo {
-    width: 70px;
-    height: 70px;
-    border-radius: 15px;
-    cursor: pointer;
-    transition: opacity .25s;
-}
-
-header img.logo:hover { opacity: .7; }
-
-/* ICON BUTTONS */
-.site-links {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.icon-btn {
-    width: 38px;
-    height: 38px;
-    border-radius: 10px;
-    background: #2a2d33;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 22px;
-    cursor: pointer;
-    text-decoration: none;
-    transition: 0.25s;
-}
-.icon-btn:hover { background: #4fa3ff; }
-
-/* MAIN CONTAINER */
-.container {
-    max-width: 900px;
-    margin: 40px auto;
-    background: #1a1d23;
-    padding: 30px;
-    border-radius: 18px;
-    border: 1px solid #333;
-}
-
-/* IMAGES INSIDE TEXT */
-.instruction-img {
-    width: 100%;
-    max-width: 450px;
-    border-radius: 12px;
-    margin: 18px 0;
-    display: block;
-}
-
-/* LIGHT THEME */
-.light-theme {
-    background: #ffffff;
-    color: #000;
-}
-
-.light-theme .container {
-    background: #f3f3f3;
-    border-color: #ccc;
-}
-
-.light-theme header img.logo {
-    box-shadow: none;
-}
-
-.light-theme .icon-btn {
-    background: #ddd;
-}
-
-.light-theme .icon-btn:hover {
-    background: #4fa3ff;
-}
-
-/* THEME SWITCHER */
-.theme-switch {
-    display: flex;
-    justify-content: center;
-}
-
-.theme-switch input { display: none; }
-
-.switch {
-    width: 60px;
-    height: 30px;
-    background: #333;
-    border-radius: 50px;
-    position: relative;
-    cursor: pointer;
-    transition: .4s;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 6px;
-    font-size: 16px;
-}
-
-.switch::after {
-    content: "";
-    position: absolute;
-    top: 3px;
-    left: 3px;
-    width: 24px;
-    height: 24px;
-    background: white;
-    border-radius: 50%;
-    transition: transform .35s ease;
-}
-
-input:checked + .switch {
-    background: #4fa3ff;
-}
-
-input:checked + .switch::after {
-    transform: translateX(30px);
-}
-
-/* MOBILE */
-@media (max-width: 600px) {
-    header {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-    }
-    .header-left { flex-direction: column; }
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Инструкция продавца MatveyCrueliti</title>
+    <style>
+        body {
+            background-color: #1e1e1e;
+            color: white;
+            font-family: Arial, sans-serif;
+            padding: 30px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #2a2a2a;
+            padding: 25px;
+            border-radius: 10px;
+        }
+        img {
+            width: 100%;
+            max-width: 450px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border: 2px solid #555;
+        }
+        a {
+            color: #8c74ff;
+        }
+    </style>
 </head>
 <body>
 
-<header>
-    <div class="header-left">
-        <!-- КЛИКАБЕЛЬНЫЙ ЛОГОТИП -->
-        <a href="https://funpay.com/users/234497/" target="_blank">
-            <img class="logo" src="https://i.pinimg.com/236x/76/50/37/7650375a6fecda5a83a182b53e28af5f.jpg">
-        </a>
-    </div>
-
-    <!-- ИКОНКИ САЙТОВ -->
-    <div class="site-links">
-        <a class="icon-btn" href="https://www.twitch.tv/" target="_blank">🎮</a>
-        <a class="icon-btn" href="https://funpay.com/users/234497/" target="_blank">💰</a>
-    </div>
-</header>
-
-<!-- SWITCH -->
-<div class="theme-switch">
-    <input type="checkbox" id="themeToggle">
-    <label for="themeToggle" class="switch">
-        <span class="sun">☀️</span>
-        <span class="moon">🌙</span>
-    </label>
-</div>
-
 <div class="container">
-    <h2>Инструкция продавца MatveyCrueliti</h2>
+    <h1>Инструкция продавца MatveyCrueliti</h1>
 
     <p>Добро пожаловать на инструкцию продавца MatveyCrueliti!</p>
 
-    <p>
-        Вам выдали данные от Twitch аккаунта. Переходим на сайт:
+    <p>Вам выдали данные от Twitch аккаунта. Переходим на сайт:
         <a href="https://www.twitch.tv/" target="_blank">https://www.twitch.tv/</a>
     </p>
 
-    <p>
-        Авторизация по данным, что я вам выдал — вводим логин и пароль, которые вы получили при покупке.
-    </p>
+    <p>Авторизация по данным, что я вам выдал — вводим логин и пароль, которые вы получили при покупке.</p>
 
-    <!-- КАРТИНКА 1 (авторизация) -->
-    <img class="instruction-img" src="/mnt/data/bcf7454c-8645-4a58-b188-975f300f4173.png">
+    <!-- 1 КАРТИНКА -->
+    <img src="https://raw.githubusercontent.com/crueliti1/crueliti-s/main/a1.jpg" alt="Ввод логина">
 
-    <p>
-        Далее переходим на страницу дропов:
+    <p>Далее переходим на страницу дропов:
         <a href="https://www.twitch.tv/drops/inventory" target="_blank">https://www.twitch.tv/drops/inventory</a>
     </p>
 
-    <p><b>Под любой нужной наградой</b> нажимаем кнопку «<b>Подключить</b>».</p>
+    <p>Под любой нужной наградой нажимаем кнопку <strong>Подключить</strong>.</p>
 
-    <!-- КАРТИНКА 2 (drops) -->
-    <img class="instruction-img" src="/mnt/data/f2a18caf-7279-43c1-bdf8-6c9ea39ad1bc.png">
+    <!-- 2 КАРТИНКА -->
+    <img src="https://raw.githubusercontent.com/crueliti1/crueliti-s/main/a2.jpg" alt="Страница дропов">
 
-    <p>
-        Вас перебрасывает на страницу подключения, где вы просто следуете шагам.
-    </p>
+    <p>Вас перебрасывает на страницу подключения, где вы просто следуете шагам.</p>
 
-    <p><b>Готово!</b> Теперь ожидайте наград в игре.</p>
+    <p><strong>Готово!</strong> Теперь ожидайте наград в игре.</p>
 </div>
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-    const body = document.body;
-    const toggle = document.getElementById("themeToggle");
-    const saved = localStorage.getItem("theme");
-
-    if (saved === "light") {
-        body.classList.add("light-theme");
-        toggle.checked = true;
-    }
-
-    toggle.addEventListener("change", () => {
-        if (toggle.checked) {
-            body.classList.add("light-theme");
-            localStorage.setItem("theme", "light");
-        } else {
-            body.classList.remove("light-theme");
-            localStorage.setItem("theme", "dark");
-        }
-    });
-});
-</script>
 
 </body>
 </html>
