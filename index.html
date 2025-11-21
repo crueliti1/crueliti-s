@@ -4,36 +4,135 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Инструкция продавца MatveyCrueliti</title>
+
     <style>
         body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
             background-color: #1e1e1e;
             color: white;
-            font-family: Arial, sans-serif;
-            padding: 30px;
-            line-height: 1.6;
+            transition: 0.3s;
         }
+
+        /* ---------- ШАПКА ---------- */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 20px;
+            background: #111;
+            border-bottom: 2px solid #333;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            text-decoration: none;
+            color: white;
+        }
+
+        .logo img {
+            width: 45px;
+            height: 45px;
+            border-radius: 10px;
+        }
+
+        .header-buttons {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .icon {
+            width: 32px;
+            height: 32px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .icon:hover { opacity: 0.7; }
+
+        .funpay-btn {
+            padding: 8px 14px;
+            background: #9147ff;
+            border-radius: 8px;
+            color: white;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+        .funpay-btn:hover { background: #7a35e6; }
+
+        /* ---------- ТЕМНАЯ / СВЕТЛАЯ ТЕМА ---------- */
+        .theme-toggle {
+            cursor: pointer;
+            font-size: 20px;
+            user-select: none;
+        }
+
+        body.light {
+            background-color: #f2f2f2;
+            color: black;
+        }
+
+        body.light header {
+            background: #e5e5e5;
+            color: black;
+            border-bottom: 2px solid #ccc;
+        }
+
         .container {
             max-width: 900px;
-            margin: auto;
+            margin: 35px auto;
             background: #2a2a2a;
             padding: 25px;
             border-radius: 10px;
         }
-        img {
+
+        body.light .container {
+            background: white;
+            color: black;
+        }
+
+        img.guide-img {
             width: 100%;
             max-width: 450px;
-            border-radius: 10px;
-            margin: 20px 0;
+            border-radius: 12px;
             border: 2px solid #555;
+            margin: 20px 0;
         }
-        a {
-            color: #8c74ff;
-        }
+
+        a { color: #8c74ff; }
+        body.light a { color: #5a30d1; }
     </style>
 </head>
 <body>
 
+<!-- ---------- ШАПКА ---------- -->
+<header>
+    <a class="logo" href="https://funpay.com/users/3996739/" target="_blank">
+        <img src="https://raw.githubusercontent.com/crueliti1/crueliti-s/main/logo.png" alt="logo">
+        <span>MatveyCrueliti</span>
+    </a>
+
+    <div class="header-buttons">
+        <a href="https://www.twitch.tv/" target="_blank">
+            <img class="icon" src="https://static.twitchcdn.net/assets/favicon-32-e29e246c157142c94346.png">
+        </a>
+
+        <a href="https://funpay.com/" target="_blank">
+            <img class="icon" src="https://funpay.com/img/logo/favicon.png">
+        </a>
+
+        <a class="funpay-btn" href="https://funpay.com/users/3996739/" target="_blank">Профиль FunPay</a>
+
+        <div class="theme-toggle" onclick="toggleTheme()">🌙</div>
+    </div>
+</header>
+
 <div class="container">
+
     <h1>Инструкция продавца MatveyCrueliti</h1>
 
     <p>Добро пожаловать на инструкцию продавца MatveyCrueliti!</p>
@@ -45,7 +144,7 @@
     <p>Авторизация по данным, что я вам выдал — вводим логин и пароль, которые вы получили при покупке.</p>
 
     <!-- 1 КАРТИНКА -->
-    <img src="https://raw.githubusercontent.com/crueliti1/crueliti-s/main/a1.jpg" alt="Ввод логина">
+    <img class="guide-img" src="https://raw.githubusercontent.com/crueliti1/crueliti-s/main/a1.jpg" alt="Ввод логина">
 
     <p>Далее переходим на страницу дропов:
         <a href="https://www.twitch.tv/drops/inventory" target="_blank">https://www.twitch.tv/drops/inventory</a>
@@ -54,12 +153,19 @@
     <p>Под любой нужной наградой нажимаем кнопку <strong>Подключить</strong>.</p>
 
     <!-- 2 КАРТИНКА -->
-    <img src="https://raw.githubusercontent.com/crueliti1/crueliti-s/main/a2.jpg" alt="Страница дропов">
+    <img class="guide-img" src="https://raw.githubusercontent.com/crueliti1/crueliti-s/main/a2.jpg" alt="Страница дропов">
 
     <p>Вас перебрасывает на страницу подключения, где вы просто следуете шагам.</p>
 
     <p><strong>Готово!</strong> Теперь ожидайте наград в игре.</p>
+
 </div>
+
+<script>
+    function toggleTheme() {
+        document.body.classList.toggle("light");
+    }
+</script>
 
 </body>
 </html>
