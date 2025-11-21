@@ -113,7 +113,6 @@
             color: #8c74ff;
         }
 
-        /* 🔥 Фиолетовые фирменные карточки */
         .info-block {
             background: #3a2a73;
             padding: 20px;
@@ -205,8 +204,6 @@ SERVICE MAY BE REFUSED. RESPECT OTHER PEOPLE’S WORK!">
        Готово! Теперь ожидайте наград в игре.
     </p>
 
-    <!-- 🔥 Фиолетовые фирменные блоки 1 — 4 -->
-
     <div class="info-block"
          data-ru="Абсолютно все товары безопасны к использованию и за них НЕ может быть наложено внутриигровых санкций на ваш аккаунт, это просто привязка твича."
          data-en="All products are completely safe to use and cannot result in any in-game sanctions on your account. It is simply a Twitch linking process.">
@@ -240,6 +237,8 @@ function setLang(lang) {
         el.innerHTML = el.getAttribute("data-" + lang);
     });
 }
+
+window.onload = () => setLang('ru');
 </script>
 
 </body>
