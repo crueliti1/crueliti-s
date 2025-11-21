@@ -1,220 +1,219 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Инструкция продавца MatveyCrueliti</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Инструкция продавца</title>
 
 <style>
-    body {
-        margin: 0;
-        padding: 0;
-        font-family: "Inter", sans-serif;
-        background: #0f1116;
-        color: white;
-        transition: background .4s ease, color .4s ease;
-    }
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0f1116;
+    color: #fff;
+    transition: background 0.4s ease, color 0.4s ease;
+}
 
-    /* LIGHT THEME */
-    .light-theme {
-        background: #ffffff;
-        color: #000000;
-    }
+/* HEADER */
+header {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+}
 
-    .light-theme .container {
-        background: #f3f3f3;
-        border-color: #cccccc;
-    }
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
 
-    .light-theme .funpay-btn {
-        background: #0077ff;
-        color: white;
-    }
+header img.logo {
+    width: 70px;
+    height: 70px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: opacity .25s;
+}
 
-    /* HEADER */
+header img.logo:hover { opacity: .7; }
+
+/* ICON BUTTONS */
+.site-links {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.icon-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: #2a2d33;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.25s;
+}
+.icon-btn:hover { background: #4fa3ff; }
+
+/* MAIN CONTAINER */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #1a1d23;
+    padding: 30px;
+    border-radius: 18px;
+    border: 1px solid #333;
+}
+
+/* IMAGES INSIDE TEXT */
+.instruction-img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 12px;
+    margin: 18px 0;
+    display: block;
+}
+
+/* LIGHT THEME */
+.light-theme {
+    background: #ffffff;
+    color: #000;
+}
+
+.light-theme .container {
+    background: #f3f3f3;
+    border-color: #ccc;
+}
+
+.light-theme header img.logo {
+    box-shadow: none;
+}
+
+.light-theme .icon-btn {
+    background: #ddd;
+}
+
+.light-theme .icon-btn:hover {
+    background: #4fa3ff;
+}
+
+/* THEME SWITCHER */
+.theme-switch {
+    display: flex;
+    justify-content: center;
+}
+
+.theme-switch input { display: none; }
+
+.switch {
+    width: 60px;
+    height: 30px;
+    background: #333;
+    border-radius: 50px;
+    position: relative;
+    cursor: pointer;
+    transition: .4s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 6px;
+    font-size: 16px;
+}
+
+.switch::after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 24px;
+    height: 24px;
+    background: white;
+    border-radius: 50%;
+    transition: transform .35s ease;
+}
+
+input:checked + .switch {
+    background: #4fa3ff;
+}
+
+input:checked + .switch::after {
+    transform: translateX(30px);
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
     header {
-        width: 100%;
-        padding: 20px 0;
-    }
-
-    .header-wrapper {
-        max-width: 1200px;
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 40px;
-    }
-
-    /* LOGO */
-    .logo img {
-        width: 90px;
-        height: 90px;
-        object-fit: cover;
-        border-radius: 12px;
-    }
-
-    /* FUNPAY BUTTON */
-    .funpay-btn {
-        background: #4fa3ff;
-        color: white;
-        padding: 12px 25px;
-        border-radius: 10px;
-        font-size: 18px;
-        text-decoration: none;
-        transition: .3s ease;
-        font-weight: 600;
-    }
-
-    .funpay-btn:hover {
-        opacity: .8;
-    }
-
-    /* THEME SWITCH */
-    .theme-switch {
-        display: flex;
-        align-items: center;
-    }
-
-    .theme-switch input { display: none; }
-
-    .switch {
-        width: 60px;
-        height: 30px;
-        background: #333;
-        border-radius: 50px;
-        position: relative;
-        cursor: pointer;
-        transition: background .4s ease;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 6px;
-        font-size: 16px;
-    }
-
-    .switch::after {
-        content: "";
-        position: absolute;
-        top: 3px;
-        left: 3px;
-        width: 24px;
-        height: 24px;
-        background: white;
-        border-radius: 50%;
-        transition: transform .35s ease;
-    }
-
-    .sun, .moon {
-        z-index: 2;
-        pointer-events: none;
-    }
-
-    input:checked + .switch {
-        background: #4fa3ff;
-    }
-
-    input:checked + .switch::after {
-        transform: translateX(30px);
-    }
-
-    /* CONTENT BLOCK */
-    .container {
-        max-width: 800px;
-        margin: 40px auto;
-        background: #1a1c22;
-        padding: 40px;
-        border-radius: 20px;
-        border: 1px solid #2a2d33;
-        transition: background .4s ease, border-color .4s ease;
-    }
-
-    h2 {
+        flex-direction: column;
+        gap: 15px;
         text-align: center;
-        margin-top: 0;
-        margin-bottom: 25px;
-        font-size: 26px;
     }
-
-    p {
-        font-size: 18px;
-        line-height: 1.55;
-    }
-
-    /* MOBILE */
-    @media (max-width: 700px) {
-        .header-wrapper {
-            flex-direction: column;
-            gap: 15px;
-            padding: 0 20px;
-        }
-
-        .logo img {
-            width: 70px;
-            height: 70px;
-        }
-
-        .funpay-btn {
-            font-size: 16px;
-            padding: 10px 18px;
-        }
-
-        .container {
-            padding: 25px;
-            margin: 20px;
-        }
-
-        p {
-            font-size: 17px;
-        }
-    }
+    .header-left { flex-direction: column; }
+}
 </style>
-
 </head>
 <body>
 
-<!-- HEADER -->
 <header>
-    <div class="header-wrapper">
-
-        <div class="logo">
-            <img src="https://i.pinimg.com/236x/76/50/37/7650375a6fecda5a83a182b53e28af5f.jpg" alt="logo">
-        </div>
-
-        <a class="funpay-btn" href="https://funpay.com/users/234497/" target="_blank">
-            Профиль FunPay
+    <div class="header-left">
+        <!-- КЛИКАБЕЛЬНЫЙ ЛОГОТИП -->
+        <a href="https://funpay.com/users/234497/" target="_blank">
+            <img class="logo" src="https://i.pinimg.com/236x/76/50/37/7650375a6fecda5a83a182b53e28af5f.jpg">
         </a>
+    </div>
 
-        <div class="theme-switch">
-            <input type="checkbox" id="themeToggle">
-            <label for="themeToggle" class="switch">
-                <span class="sun">☀️</span>
-                <span class="moon">🌙</span>
-            </label>
-        </div>
-
+    <!-- ИКОНКИ САЙТОВ -->
+    <div class="site-links">
+        <a class="icon-btn" href="https://www.twitch.tv/" target="_blank">🎮</a>
+        <a class="icon-btn" href="https://funpay.com/users/234497/" target="_blank">💰</a>
     </div>
 </header>
 
-<!-- CONTENT -->
+<!-- SWITCH -->
+<div class="theme-switch">
+    <input type="checkbox" id="themeToggle">
+    <label for="themeToggle" class="switch">
+        <span class="sun">☀️</span>
+        <span class="moon">🌙</span>
+    </label>
+</div>
+
 <div class="container">
     <h2>Инструкция продавца MatveyCrueliti</h2>
 
     <p>Добро пожаловать на инструкцию продавца MatveyCrueliti!</p>
 
-    <p>Вам выдали данные от Twitch аккаунта. Переходим на сайт:
-        <a href="https://www.twitch.tv/" target="_blank">https://www.twitch.tv/</a></p>
+    <p>
+        Вам выдали данные от Twitch аккаунта. Переходим на сайт:
+        <a href="https://www.twitch.tv/" target="_blank">https://www.twitch.tv/</a>
+    </p>
 
-    <p>Авторизация по данным, что я вам выдал — вводим логин и пароль, которые вы получили при покупке.</p>
+    <p>
+        Авторизация по данным, что я вам выдал — вводим логин и пароль, которые вы получили при покупке.
+    </p>
 
-    <p>Далее переходим на страницу дропов:
-        <a href="https://www.twitch.tv/drops/inventory" target="_blank">
-            https://www.twitch.tv/drops/inventory
-        </a></p>
+    <!-- КАРТИНКА 1 (авторизация) -->
+    <img class="instruction-img" src="/mnt/data/bcf7454c-8645-4a58-b188-975f300f4173.png">
 
-    <p>Под <b>любой нужной наградой</b> нажимаем кнопку «<b>Подключить</b>».</p>
+    <p>
+        Далее переходим на страницу дропов:
+        <a href="https://www.twitch.tv/drops/inventory" target="_blank">https://www.twitch.tv/drops/inventory</a>
+    </p>
 
-    <p>Вас перебрасывает на страницу подключения, где вы просто следуете шагам.</p>
+    <p><b>Под любой нужной наградой</b> нажимаем кнопку «<b>Подключить</b>».</p>
+
+    <!-- КАРТИНКА 2 (drops) -->
+    <img class="instruction-img" src="/mnt/data/f2a18caf-7279-43c1-bdf8-6c9ea39ad1bc.png">
+
+    <p>
+        Вас перебрасывает на страницу подключения, где вы просто следуете шагам.
+    </p>
 
     <p><b>Готово!</b> Теперь ожидайте наград в игре.</p>
 </div>
@@ -223,8 +222,8 @@
 document.addEventListener("DOMContentLoaded", () => {
     const body = document.body;
     const toggle = document.getElementById("themeToggle");
-
     const saved = localStorage.getItem("theme");
+
     if (saved === "light") {
         body.classList.add("light-theme");
         toggle.checked = true;
