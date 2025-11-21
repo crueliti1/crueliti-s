@@ -10,19 +10,104 @@
             background-color: #1e1e1e;
             color: white;
             font-family: Arial, sans-serif;
-            padding: 30px;
+            padding: 0;
+            margin: 0;
             line-height: 1.6;
+            transition: .3s;
         }
 
+        /* --- HEADER --- */
+        header {
+            background: #2a2a2a;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #3d3d3d;
+        }
+
+        header img {
+            width: 85px;
+            height: 85px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid #8c74ff;
+            transition: .3s;
+        }
+
+        header img:hover {
+            transform: scale(1.05);
+        }
+
+        .funpay-btn {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 10px 18px;
+            border: 2px solid #8c74ff;
+            border-radius: 10px;
+            color: #8c74ff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .funpay-btn:hover {
+            background: #8c74ff;
+            color: #1e1e1e;
+        }
+
+        /* Тема */
+        .theme-switch {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .theme-switch input {
+            display: none;
+        }
+
+        .switch {
+            width: 60px;
+            height: 28px;
+            background: #444;
+            border-radius: 50px;
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 6px;
+            font-size: 14px;
+        }
+
+        .switch::after {
+            content: "";
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            background: white;
+            border-radius: 50%;
+            left: 2px;
+            transition: .35s;
+        }
+
+        input:checked + .switch {
+            background: #8c74ff;
+        }
+
+        input:checked + .switch::after {
+            transform: translateX(30px);
+        }
+
+        /* --- CONTENT --- */
         .container {
             max-width: 900px;
-            margin: auto;
+            margin: 20px auto;
             background: #2a2a2a;
             padding: 25px;
             border-radius: 10px;
         }
 
-        /* --- Новый стиль для заголовка --- */
+        /* Заголовок */
         .title-box {
             text-align: center;
             font-size: 28px;
@@ -40,7 +125,7 @@
             font-size: 26px;
         }
 
-        /* --- Красный блок предупреждения --- */
+        /* Красное предупреждение */
         .warning-box {
             background: #7a0000;
             color: #ffbdbd;
@@ -51,36 +136,74 @@
             margin: 20px 0;
         }
 
-        img {
+        img.instruction-img {
             width: 100%;
             max-width: 450px;
             border-radius: 10px;
-            margin: 20px 0;
             border: 2px solid #555;
+            margin: 20px 0;
         }
 
-        a {
-            color: #8c74ff;
+        a { color: #8c74ff; }
+
+        /* Светлая тема */
+        .light-theme {
+            background: #ffffff;
+            color: #000000;
+        }
+
+        .light-theme header {
+            background: #eaeaea;
+            border-bottom-color: #ccc;
+        }
+
+        .light-theme .container {
+            background: #f3f3f3;
+        }
+
+        .light-theme .funpay-btn {
+            border-color: #0077cc;
+            color: #0077cc;
+        }
+
+        .light-theme .funpay-btn:hover {
+            background: #0077cc;
+            color: white;
         }
     </style>
 </head>
 <body>
 
+<header>
+    <a href="https://funpay.com/users/234497/" target="_blank">
+        <img src="https://raw.githubusercontent.com/crueliti1/crueliti-s/main/9541cc3fcd847f455b1885a7acd7f182.jpg" alt="logo">
+    </a>
+
+    <div>
+        <a class="funpay-btn" href="https://funpay.com/users/234497/" target="_blank">
+            Мой профиль FunPay
+        </a>
+    </div>
+
+    <div class="theme-switch">
+        <input type="checkbox" id="themeToggle">
+        <label for="themeToggle" class="switch">
+            <span>☀️</span>
+            <span>🌙</span>
+        </label>
+    </div>
+</header>
+
 <div class="container">
 
-    <!-- ОБНОВЛЁННЫЙ ЗАГОЛОВОК -->
     <div class="title-box">
         Инструкция продавца 
         <span class="name-tag">MatveyCrueliti</span>
     </div>
 
-    <!-- КРАСНОЕ ПРЕДУПРЕЖДЕНИЕ -->
     <div class="warning-box">
-        ВНИМАНИЕ, ЕСЛИ НА ТВИЧЕ НЕТ НАГРАД , ЭТО НЕ ЗНАЧИТ ЧТО ИХ НЕТ ВОВСЕ, У ТВИЧА СТРОГИЕ ПРАВИЛА, 
-        ЕСЛИ НАГРАДА БЫЛА ПОЛУЧЕНА НА ТВИЧ БОЛЕЕ ЧЕМ 6 МЕСЯЦЕВ, ЕЕ ПРОСТО ВИЗУАЛЬНО УБИРАЮТ ОТ ТУДА, 
-        НО ОНА ТАМ ПО ПРЕЖНЕМУ ЕСТЬ!!!!!!!  
-        НЕ СТОИТ СРАЗУ ПИСАТЬ МНЕ ЧТО НАГРАДЫ НЕТ И ПОРТИТЬ РЕЙТИНГ ПРОДАВЦА!!!!  
-        ИНАЧЕ Я НЕ БУДУ ОБСЛУЖИВАТЬ ВАС И ОТВЕЧАТЬ ВАМ В ДАЛЬНЕЙШЕЙМ! УВАЖАЙТЕ ЧУЖОЙ ТРУД!
+        ВНИМАНИЕ, ЕСЛИ НА ТВИЧЕ НЕТ НАГРАД , ЭТО НЕ ЗНАЧИТ ЧТО ИХ НЕТ ВОВСЕ...
+        УВАЖАЙТЕ ЧУЖОЙ ТРУД!
     </div>
 
     <p>Добро пожаловать на инструкцию продавца MatveyCrueliti!</p>
@@ -89,10 +212,10 @@
         <a href="https://www.twitch.tv/" target="_blank">https://www.twitch.tv/</a>
     </p>
 
-    <p>Авторизация по данным, что я вам выдал — вводим логин и пароль, которые вы получили при покупке.</p>
+    <p>Авторизация по данным, что я вам выдал — вводим логин и пароль.</p>
 
-    <!-- 1 КАРТИНКА -->
-    <img src="https://raw.githubusercontent.com/crueliti1/crueliti-s/main/a1.jpg" alt="Ввод логина">
+    <img class="instruction-img" 
+         src="https://raw.githubusercontent.com/crueliti1/crueliti-s/main/a1.jpg">
 
     <p>Далее переходим на страницу дропов:
         <a href="https://www.twitch.tv/drops/inventory" target="_blank">
@@ -102,13 +225,34 @@
 
     <p>Под любой нужной наградой нажимаем кнопку <strong>Подключить</strong>.</p>
 
-    <!-- 2 КАРТИНКА -->
-    <img src="https://raw.githubusercontent.com/crueliti1/crueliti-s/main/a2.jpg" alt="Страница дропов">
+    <img class="instruction-img" 
+         src="https://raw.githubusercontent.com/crueliti1/crueliti-s/main/a2.jpg">
 
-    <p>Вас перебрасывает на страницу подключения, где вы просто следуете шагам.</p>
-
-    <p><strong>Готово!</strong> Теперь ожидайте наград в игре.</p>
+    <p>Готово! Теперь ожидайте наград в игре.</p>
 </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const body = document.body;
+    const toggle = document.getElementById("themeToggle");
+    const saved = localStorage.getItem("theme");
+
+    if (saved === "light") {
+        body.classList.add("light-theme");
+        toggle.checked = true;
+    }
+
+    toggle.addEventListener("change", () => {
+        if (toggle.checked) {
+            body.classList.add("light-theme");
+            localStorage.setItem("theme", "light");
+        } else {
+            body.classList.remove("light-theme");
+            localStorage.setItem("theme", "dark");
+        }
+    });
+});
+</script>
 
 </body>
 </html>
