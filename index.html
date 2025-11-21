@@ -99,6 +99,16 @@
             word-wrap: break-word;
         }
 
+        .info-block {
+            background: #333;
+            padding: 18px;
+            margin-top: 25px;
+            border-radius: 10px;
+            font-size: 17px;
+            line-height: 1.5;
+            border-left: 5px solid #7d5bff;
+        }
+
         img.guide-img {
             width: 100%;
             max-width: 520px;
@@ -147,56 +157,63 @@ TWITCH HAS STRICT RULES: IF A REWARD WAS RECEIVED MORE THAN 6 MONTHS AGO,
 IT IS HIDDEN VISUALLY, BUT IT STILL EXISTS!
 DO NOT CLAIM THAT THERE IS NO REWARD AND DO NOT DAMAGE THE SELLER'S RATING!
 OTHERWISE SERVICE WILL BE REFUSED. RESPECT OTHER PEOPLE’S WORK!">
+        ВНИМАНИЕ, ЕСЛИ НА ТВИЧЕ НЕТ НАГРАД, ЭТО НЕ ЗНАЧИТ ЧТО ИХ НЕТ ВОВСЕ!
     </div>
 
     <p data-ru="Добро пожаловать на инструкцию продавца MatveyCrueliti!"
        data-en="Welcome to the seller instructions of MatveyCrueliti!">
+       Добро пожаловать на инструкцию продавца MatveyCrueliti!
     </p>
 
     <p data-ru="Вам выдали данные от Twitch аккаунта. Переходим на сайт:" 
        data-en="You received Twitch account details. Go to the website:">
+        Вам выдали данные от Twitch аккаунта. Переходим на сайт:
         <a href="https://www.twitch.tv/" target="_blank">https://www.twitch.tv/</a>
     </p>
 
     <p data-ru="Авторизация по данным — вводим логин и пароль, которые вы получили при покупке."
        data-en="Log in using the username and password you received after purchase.">
+       Авторизация по данным — вводим логин и пароль, которые вы получили при покупке.
     </p>
 
     <img class="guide-img" src="https://raw.githubusercontent.com/crueliti1/crueliti-s/main/a1.jpg" alt="Авторизация">
 
     <p data-ru="Далее переходим на страницу дропов:"
        data-en="Next, go to the drops page:">
+        Далее переходим на страницу дропов:
         <a href="https://www.twitch.tv/drops/inventory" target="_blank">https://www.twitch.tv/drops/inventory</a>
     </p>
 
     <p data-ru="Под любой нужной наградой нажимаем кнопку «Подключить»."
        data-en="Under any desired reward, click the “Connect” button.">
+       Под любой нужной наградой нажимаем кнопку «Подключить».
     </p>
 
     <img class="guide-img" src="https://raw.githubusercontent.com/crueliti1/crueliti-s/main/a2.jpg" alt="Drops">
 
     <p data-ru="Вас перебрасывает на страницу подключения — следуйте шагам."
        data-en="You will be redirected to the linking page — follow the steps.">
+       Вас перебрасывает на страницу подключения — следуйте шагам.
     </p>
 
     <p data-ru="Готово! Теперь ожидайте наград в игре."
        data-en="Done! Now wait for the rewards to appear in the game.">
+       Готово! Теперь ожидайте наград в игре.
     </p>
 
-</div>
+    <!-- Добавленные блоки -->
 
-<script>
-function setLang(lang) {
-    document.documentElement.lang = lang;
+    <div class="info-block" data-ru="Абсолютно все товары безопасны к использованию и за них НЕ может быть наложено внутриигровых санкций на ваш аккаунт, это просто привязка твича"
+         data-en="All products are completely safe to use and cannot cause any in-game sanctions on your account. It is just a Twitch linking.">
+        Абсолютно все товары безопасны к использованию и за них НЕ может быть наложено внутриигровых санкций на ваш аккаунт, это просто привязка твича
+    </div>
 
-    document.querySelectorAll("[data-ru]").forEach(el => {
-        el.innerHTML = el.getAttribute("data-" + lang);
-    });
-}
+    <div class="info-block" data-ru="При попытке обмана продавца/пониженном отзыве из-за своей невнимательности или других факторов/вранья ради личной выгоды, вы будете добавлены в Чёрный Список, а все предметы, которые вам удастся получить с TWITCH аккаунта будут откачены службой поддержки твича. Подумайте дважды, прежде чем пытаться нажиться или портить продавцу рейтинг.
+Так же вам будет отказано в полном и дальнейшем обслуживание , со strony моего сервиса."
+         data-en="If you attempt to deceive the seller or leave a lowered review due to your own inattentiveness or intentional lies, you will be added to the Blacklist. All items you managed to obtain from the TWITCH account will be revoked by Twitch Support. Think twice before trying to profit or damage the seller's rating.
+You will also be denied any further service from my side.">
+        При попытке обмана продавца/пониженном отзыве из-за своей невнимательности или других факторов/вранья ради личной выгоды, вы будете добавлены в Чёрный Список, а все предметы, которые вам удастся получить с TWITCH аккаунта будут откачены службой поддержки твича. Подумайте дважды, прежде чем пытаться нажиться или портить продавцу рейтинг.
+        Так же вам будет отказано в полном и дальнейшем обслуживание , со стороны моего сервиса.
+    </div>
 
-// Автоматически включаем русский при загрузке
-setLang('ru');
-</script>
-
-</body>
-</html>
+    <div class="info-block" data-ru="Если у вас возникли какие-то проблемы, вызовите продавца и
