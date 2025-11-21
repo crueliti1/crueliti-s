@@ -1,153 +1,132 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Инструкция продавца MatveyCrueliti</title>
-
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            transition: background 0.3s, color 0.3s;
-            background: #121212;
-            color: #ffffff;
-        }
-
-        /* Светлая тема */
-        body.light {
-            background: #f2f2f2;
-            color: #000000;
-        }
-
-        /* Верхнее меню */
-        header {
-            width: 100%;
-            padding: 12px 25px;
-            background: #1c1c1c;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        body.light header {
-            background: #ffffff;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 20px;
-            font-weight: bold;
-        }
-        .logo img {
-            height: 30px;
-        }
-
-        /* Кнопки справа */
-        .nav-buttons {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .btn {
-            padding: 10px 18px;
-            background: #8c74ff;
-            color: #fff;
-            border-radius: 8px;
-            text-decoration: none;
-            transition: 0.2s;
-        }
-        .btn:hover {
-            background: #7a63e6;
-        }
-
-        /* Тумблер темы */
-        .theme-toggle {
-            cursor: pointer;
-            font-size: 22px;
-        }
-
-        /* Контейнер */
-        .container {
-            max-width: 900px;
-            margin: 40px auto;
-            background: #1d1d1d;
-            padding: 30px;
-            border-radius: 12px;
-        }
-        body.light .container {
-            background: #ffffff;
-            color: #000;
-        }
-
-        img {
-            width: 100%;
-            max-width: 500px;
-            border-radius: 10px;
-            margin: 25px 0;
-            border: 2px solid #444;
-        }
-        body.light img {
-            border-color: #888;
-        }
-
-        a {
-            color: #8c74ff;
-        }
-    </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Инструкция продавца MatveyCrueliti</title>
+<style>
+  :root{
+    --bg:#0f1113; --panel:#1b1d20; --accent:#8c74ff; --text:#eaeaea;
+  }
+  html,body{height:100%;margin:0;font-family:Inter, Arial, sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
+  /* Header */
+  header{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;background:rgba(0,0,0,0.25);border-bottom:1px solid rgba(255,255,255,0.03)}
+  .header-left{display:flex;align-items:center;gap:12px}
+  .logo-link{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text)}
+  .logo-img{width:48px;height:48px;border-radius:10px;object-fit:cover;display:block}
+  .site-title{font-weight:700;font-size:18px}
+  .header-right{display:flex;align-items:center;gap:12px}
+  .icon-btn{width:40px;height:40px;border-radius:10px;background:rgba(255,255,255,0.02);display:inline-flex;align-items:center;justify-content:center;text-decoration:none;color:var(--text)}
+  .funpay-btn{padding:8px 14px;background:var(--accent);color:#fff;border-radius:10px;text-decoration:none;font-weight:600}
+  .funpay-btn:hover{opacity:.95}
+  /* Theme switch */
+  .theme-switch{display:flex;align-items:center}
+  .theme-toggle{cursor:pointer;font-size:20px;padding:6px}
+  /* Main container */
+  main.container{max-width:920px;margin:36px auto;padding:30px;background:var(--panel);border-radius:14px;border:1px solid rgba(255,255,255,0.02)}
+  h1{margin-top:0;font-size:28px}
+  p{color:rgba(255,255,255,0.85);line-height:1.6}
+  .guide-img{width:100%;max-width:520px;border-radius:12px;display:block;margin:18px 0;border:1px solid rgba(255,255,255,0.04)}
+  a{color:var(--accent)}
+  /* Light theme */
+  body.light{background:#f5f5f7;color:#111}
+  body.light main.container{background:#ffffff;color:#111;border-color:#e6e6e6}
+  body.light .funpay-btn{background:#6b93ff}
+  body.light .icon-btn{background:#f3f3f4}
+  /* Mobile */
+  @media (max-width:700px){
+    header{flex-direction:column;gap:10px;align-items:center}
+    .header-left{justify-content:center}
+    .header-right{justify-content:center}
+    main.container{margin:18px;padding:20px;width:92%}
+    h1{font-size:22px}
+  }
+</style>
 </head>
-
 <body>
-
-<header>
-    <div class="logo">
-        <img src="https://i.imgur.com/5N6m2Kq.png" alt="logo">
-        MatveyCrueliti
+  <!-- HEADER -->
+  <header>
+    <div class="header-left">
+      <!-- Кликабельный логотип (вставлен локальный путь на загруженный файл) -->
+      <a class="logo-link" href="https://funpay.com/users/234497/" target="_blank" rel="noopener">
+        <img class="logo-img" src="/mnt/data/2ec7764c-e708-4f2d-8bba-74536b204c6d.png" alt="logo">
+        <span class="site-title">MatveyCrueliti</span>
+      </a>
     </div>
 
-    <div class="nav-buttons">
-        <a class="btn" href="https://funpay.com/users/2790822/" target="_blank">Профиль FunPay</a>
-        <div class="theme-toggle" onclick="toggleTheme()">🌙</div>
-    </div>
-</header>
+    <div class="header-right">
+      <!-- Иконки (кликабельные) -->
+      <a class="icon-btn" href="https://www.twitch.tv/" target="_blank" rel="noopener" title="Twitch">
+        <img src="https://static.twitchcdn.net/assets/favicon-32-e29e246c157142c94346.png" alt="twitch" width="18" height="18">
+      </a>
+      <a class="icon-btn" href="https://funpay.com/" target="_blank" rel="noopener" title="FunPay">
+        <img src="https://funpay.com/img/logo/favicon.png" alt="funpay" width="18" height="18">
+      </a>
 
-<div class="container">
+      <!-- Кнопка профиль -->
+      <a class="funpay-btn" href="https://funpay.com/users/234497/" target="_blank" rel="noopener">Профиль FunPay</a>
+
+      <!-- Переключатель темы (иконка будет меняться) -->
+      <div class="theme-switch">
+        <div id="themeToggle" class="theme-toggle" title="Переключить тему">🌙</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="container" role="main" aria-label="Инструкция">
     <h1>Инструкция продавца MatveyCrueliti</h1>
 
     <p>Добро пожаловать на инструкцию продавца MatveyCrueliti!</p>
 
     <p>Вам выдали данные от Twitch аккаунта. Переходим на сайт:
-        <a href="https://www.twitch.tv/" target="_blank">https://www.twitch.tv/</a>
+      <a href="https://www.twitch.tv/" target="_blank" rel="noopener">https://www.twitch.tv/</a>
     </p>
 
     <p>Авторизация по данным, что я вам выдал — вводим логин и пароль, которые вы получили при покупке.</p>
 
-    <!-- КАРТИНКА 1 -->
-    <img src="https://raw.githubusercontent.com/crueliti1/crueliti-s/main/a1.jpg" alt="Ввод логина">
+    <!-- Картинка 1: авторизация (raw link на GitHub) -->
+    <img class="guide-img" src="https://raw.githubusercontent.com/crueliti1/crueliti-s/main/a1.jpg" alt="Авторизация Twitch">
 
     <p>Далее переходим на страницу дропов:
-        <a href="https://www.twitch.tv/drops/inventory" target="_blank">https://www.twitch.tv/drops/inventory</a>
+      <a href="https://www.twitch.tv/drops/inventory" target="_blank" rel="noopener">https://www.twitch.tv/drops/inventory</a>
     </p>
 
-    <p>Под любой нужной наградой нажимаем кнопку <strong>Подключить</strong>.</p>
+    <p><strong>Под любой нужной наградой</strong> нажимаем кнопку «<strong>Подключить</strong>».</p>
 
-    <!-- КАРТИНКА 2 -->
-    <img src="https://raw.githubusercontent.com/crueliti1/crueliti-s/main/a2.jpg" alt="Страница дропов">
+    <!-- Картинка 2: drops -->
+    <img class="guide-img" src="https://raw.githubusercontent.com/crueliti1/crueliti-s/main/a2.jpg" alt="Drops inventory">
 
     <p>Вас перебрасывает на страницу подключения, где вы просто следуете шагам.</p>
 
     <p><strong>Готово!</strong> Теперь ожидайте наград в игре.</p>
-</div>
+  </main>
 
 <script>
-    function toggleTheme() {
-        document.body.classList.toggle("light");
-        const icon = document.querySelector(".theme-toggle");
-        icon.textContent = document.body.classList.contains("light") ? "☀️" : "🌙";
-    }
-</script>
+  // Восстановление темы и установка иконки
+  (function(){
+    const body = document.body;
+    const toggle = document.getElementById('themeToggle');
 
+    function setIcon(){
+      toggle.textContent = body.classList.contains('light') ? '☀️' : '🌙';
+    }
+
+    // Читаем сохранённую тему
+    try {
+      const saved = localStorage.getItem('site-theme');
+      if (saved === 'light') body.classList.add('light');
+    } catch(e){}
+
+    setIcon();
+
+    // Переключение
+    toggle.addEventListener('click', () => {
+      body.classList.toggle('light');
+      setIcon();
+      try { localStorage.setItem('site-theme', body.classList.contains('light') ? 'light' : 'dark'); } catch(e){}
+    });
+  })();
+</script>
 </body>
 </html>
