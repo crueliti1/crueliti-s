@@ -13,7 +13,6 @@
             font-family: Arial, sans-serif;
         }
 
-        /* ШАПКА */
         header {
             width: 100%;
             background: #111;
@@ -24,7 +23,6 @@
             align-items: center;
         }
 
-        /* ЛОГО */
         .logo-box {
             display: flex;
             align-items: center;
@@ -42,8 +40,7 @@
             font-weight: bold;
         }
 
-        /* КНОПКА FUNPAY */
-        .funpay-btn {
+        .funpay-btn, .lang-btn {
             background: #a285ff;
             padding: 10px 20px;
             border-radius: 8px;
@@ -51,13 +48,13 @@
             text-decoration: none;
             font-size: 16px;
             transition: 0.3s;
+            margin-left: 10px;
         }
 
-        .funpay-btn:hover {
+        .funpay-btn:hover, .lang-btn:hover {
             background: #c6b7ff;
         }
 
-        /* ОСНОВНОЙ БЛОК */
         .container {
             max-width: 900px;
             margin: 40px auto;
@@ -67,7 +64,6 @@
             box-sizing: border-box;
         }
 
-        /* Заголовок */
         .title-wrapper {
             display: flex;
             align-items: center;
@@ -87,7 +83,6 @@
             border-radius: 8px;
         }
 
-        /* Красный блок предупреждения */
         .warning {
             background: #a30000;
             padding: 12px 18px;
@@ -99,7 +94,6 @@
             line-height: 1.5;
         }
 
-        /* Картинки */
         img.guide-img {
             width: 100%;
             max-width: 520px;
@@ -122,47 +116,89 @@
         <div class="logo-text">MatveyCrueliti</div>
     </div>
 
-    <a class="funpay-btn" href="https://funpay.com/users/234497/" target="_blank">Профиль FunPay</a>
+    <div style="display:flex; align-items:center;">
+        <a class="funpay-btn" href="https://funpay.com/users/234497/" target="_blank">Профиль FunPay</a>
+        <a class="lang-btn" href="#" onclick="switchLang()">EN / RU</a>
+    </div>
 </header>
 
 <div class="container">
 
     <div class="title-wrapper">
-        <div class="title">Инструкция продавца</div>
+        <div class="title" data-ru="Инструкция продавца" data-en="Seller Instructions">Инструкция продавца</div>
         <div class="name-box">MatveyCrueliti</div>
     </div>
 
-    <div class="warning">
-        ВНИМАНИЕ, ЕСЛИ НА ТВИЧЕ НЕТ НАГРАД, ЭТО НЕ ЗНАЧИТ ЧТО ИХ НЕТ ВОВСЕ!  
+    <div class="warning" 
+         data-ru="ВНИМАНИЕ, ЕСЛИ НА ТВИЧЕ НЕТ НАГРАД, ЭТО НЕ ЗНАЧИТ ЧТО ИХ НЕТ ВОВСЕ!  
         У ТВИЧА СТРОГИЕ ПРАВИЛА: ЕСЛИ НАГРАДА БЫЛА ПОЛУЧЕНА БОЛЕЕ 6 МЕСЯЦЕВ НАЗАД —  
         ЕЁ ВИЗУАЛЬНО СКРЫВАЮТ, НО ОНА ВСЁ РАВНО ЕСТЬ!  
         НЕ ПИШИТЕ ЧТО НАГРАДЫ НЕТ И НЕ ПОРТИТЕ РЕЙТИНГ ПРОДАВЦА!  
-        ИНАЧЕ В ОБСЛУЖИВАНИИ БУДЕТ ОТКАЗАНО. УВАЖАЙТЕ ЧУЖОЙ ТРУД!
+        ИНАЧЕ В ОБСЛУЖИВАНИИ БУДЕТ ОТКАЗАНО. УВАЖАЙТЕ ЧУЖОЙ ТРУД!"
+         data-en="WARNING: IF THERE ARE NO REWARDS ON TWITCH, IT DOES NOT MEAN THEY DON'T EXIST!  
+        TWITCH HAS STRICT RULES: IF A REWARD WAS RECEIVED MORE THAN 6 MONTHS AGO,  
+        IT IS HIDDEN VISUALLY, BUT IT STILL EXISTS!  
+        DO NOT CLAIM THAT THERE IS NO REWARD AND DO NOT DAMAGE THE SELLER'S RATING!  
+        OTHERWISE SERVICE WILL BE REFUSED. RESPECT OTHER PEOPLE’S WORK!">
+        ВНИМАНИЕ, ЕСЛИ НА ТВИЧЕ НЕТ НАГРАД, ЭТО НЕ ЗНАЧИТ ЧТО ИХ НЕТ ВОВСЕ!
     </div>
 
-    <p>Добро пожаловать на инструкцию продавца MatveyCrueliti!</p>
+    <p data-ru="Добро пожаловать на инструкцию продавца MatveyCrueliti!"
+       data-en="Welcome to the seller instructions of MatveyCrueliti!">
+       Добро пожаловать на инструкцию продавца MatveyCrueliti!
+    </p>
 
-    <p>Вам выдали данные от Twitch аккаунта. Переходим на сайт: 
+    <p data-ru='Вам выдали данные от Twitch аккаунта. Переходим на сайт:' 
+       data-en='You received Twitch account details. Go to the website:'>
+        Вам выдали данные от Twitch аккаунта. Переходим на сайт:
         <a href="https://www.twitch.tv/" target="_blank">https://www.twitch.tv/</a>
     </p>
 
-    <p>Авторизация по данным — вводим логин и пароль, которые вы получили при покупке.</p>
+    <p data-ru="Авторизация по данным — вводим логин и пароль, которые вы получили при покупке."
+       data-en="Log in using the username and password you received after purchase.">
+       Авторизация по данным — вводим логин и пароль, которые вы получили при покупке.
+    </p>
 
     <img class="guide-img" src="https://raw.githubusercontent.com/crueliti1/crueliti-s/main/a1.jpg" alt="Авторизация">
 
-    <p>Далее переходим на страницу дропов:
+    <p data-ru="Далее переходим на страницу дропов:"
+       data-en="Next, go to the drops page:">
+        Далее переходим на страницу дропов:
         <a href="https://www.twitch.tv/drops/inventory" target="_blank">https://www.twitch.tv/drops/inventory</a>
     </p>
 
-    <p>Под любой нужной наградой нажимаем кнопку <strong>«Подключить»</strong>.</p>
+    <p data-ru='Под любой нужной наградой нажимаем кнопку «Подключить».'
+       data-en='Under any desired reward, click the “Connect” button.'>
+       Под любой нужной наградой нажимаем кнопку «Подключить».
+    </p>
 
     <img class="guide-img" src="https://raw.githubusercontent.com/crueliti1/crueliti-s/main/a2.jpg" alt="Drops">
 
-    <p>Вас перебрасывает на страницу подключения — следуйте шагам.</p>
+    <p data-ru="Вас перебрасывает на страницу подключения — следуйте шагам."
+       data-en="You will be redirected to the linking page — follow the steps.">
+       Вас перебрасывает на страницу подключения — следуйте шагам.
+    </p>
 
-    <p><strong>Готово!</strong> Теперь ожидайте наград в игре.</p>
+    <p data-ru="Готово! Теперь ожидайте наград в игре."
+       data-en="Done! Now wait for the rewards to appear in the game.">
+       Готово! Теперь ожидайте наград в игре.
+    </p>
 
 </div>
+
+<script>
+let lang = "ru";
+
+function switchLang() {
+    lang = (lang === "ru") ? "en" : "ru";
+
+    document.querySelectorAll("[data-ru]").forEach(el => {
+        el.innerHTML = el.getAttribute("data-" + lang).replace(/\n/g, "<br>");
+    });
+
+    document.documentElement.lang = lang;
+}
+</script>
 
 </body>
 </html>
