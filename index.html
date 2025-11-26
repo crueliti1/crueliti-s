@@ -1,312 +1,179 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Инструкция продавца MatveyCrueliti</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MatveyCrueliti — Инструкция продавца</title>
 
-    <style>
-        body {
-            margin: 0;
-            background-color: #1c1c1c;
-            color: #ffffff;
-            font-family: Arial, sans-serif;
+<style>
+    body {
+        background: #1A1A1A;
+        font-family: Arial, sans-serif;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .lang-switch {
+        display: flex;
+        gap: 10px;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+
+    .lang-btn {
+        background: #4A3AFF;
+        padding: 6px 12px;
+        border-radius: 8px;
+        cursor: pointer;
+        color: #fff;
+        font-weight: bold;
+    }
+
+    .profile-btn {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        background: #4A3AFF;
+        padding: 6px 12px;
+        border-radius: 8px;
+        color: #fff;
+        font-weight: bold;
+    }
+
+    h1 {
+        margin-top: 90px;
+        font-size: 32px;
+    }
+
+    .warning-red {
+        background: #9b0000;
+        padding: 22px;
+        font-size: 17px;
+        border-radius: 10px;
+        margin-top: 20px;
+        line-height: 1.45;
+    }
+
+    .purple-box {
+        background: #251c66;
+        padding: 22px;
+        border-radius: 12px;
+        font-size: 17px;
+        line-height: 1.45;
+        margin-top: 20px;
+    }
+
+    /* Новые блоки */
+    .info-block {
+        background: #1a1446;
+        border-radius: 12px;
+        padding: 18px;
+        margin: 16px 0;
+        color: #fff;
+        font-size: 17px;
+        line-height: 1.45;
+        overflow: visible !important;
+    }
+
+    /* фикс для раскрытия текста */
+    .collapsible-content {
+        max-height: none !important;
+        overflow: visible !important;
+    }
+
+    /* мобильные патчи */
+    @media (max-width: 600px) {
+        .lang-switch {
+            top: 60px;
+            right: 20px;
         }
-
-        header {
-            width: 100%;
-            background: #111;
-            padding: 15px 20px;
-            box-sizing: border-box;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        .profile-btn {
+            top: 20px;
         }
-
-        .logo-box {
-            display: flex;
-            align-items: center;
-            gap: 12px;
+        h1 {
+            margin-top: 120px;
         }
-
-        .logo-box img {
-            height: 40px;
-            width: auto;
-            border-radius: 6px;
-        }
-
-        .logo-text {
-            font-size: 20px;
-            font-weight: bold;
-        }
-
-        .funpay-btn, .lang-btn {
-            background: #a285ff;
-            padding: 10px 14px;
-            border-radius: 8px;
-            color: white;
-            text-decoration: none;
-            font-size: 14px;
-            transition: 0.3s;
-            margin-left: 6px;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .funpay-btn:hover, .lang-btn:hover {
-            background: #c6b7ff;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 20px auto;
-            background: #242424;
-            padding: 25px;
-            border-radius: 12px;
-            box-sizing: border-box;
-        }
-
-        .title-wrapper {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-
-        .title {
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .name-box {
-            background: #7d5bff;
-            padding: 6px 12px;
-            font-size: 20px;
-            border-radius: 8px;
-        }
-
-        .warning {
-            background: #a30000;
-            padding: 16px 18px;
-            margin-top: 20px;
-            margin-bottom: 25px;
-            border-radius: 8px;
-            color: #fff;
-            font-weight: bold;
-            line-height: 1.5;
-            white-space: pre-line;
-            overflow-wrap: break-word;
-            word-break: break-word;
-        }
-
-        img.guide-img {
-            width: 100%;
-            max-width: 520px;
-            border-radius: 10px;
-            margin: 25px 0;
-            border: 2px solid #555;
-            display: block;
-        }
-
-        a {
-            color: #8c74ff;
-        }
-
-        .info-block {
-            background: #3a2a73;
-            padding: 20px;
-            border-radius: 12px;
-            margin-top: 25px;
-            line-height: 1.6;
-            font-size: 16px;
-            color: #f2f2ff;
-            border: 1px solid #6d59c9;
-            box-shadow: 0 0 10px rgba(125, 91, 255, 0.25);
-            white-space: normal;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
-        }
-
-        /* ----- FORCED RED BORDER FIX ----- */
-        .info-block-red-fixed {
-            border: 3px solid #ff0000 !important;
-            box-shadow: 0 0 22px rgba(255, 0, 0, 0.55) !important;
-            background: #311d55 !important;
-        }
-
-        /* 📱 Мобильная адаптация */
-        @media (max-width: 480px) {
-            header {
-                flex-direction: column;
-                gap: 10px;
-                text-align: center;
-            }
-
-            .funpay-btn, .lang-btn {
-                font-size: 13px;
-                padding: 8px 10px;
-                margin-left: 0;
-            }
-
-            header div:last-child a {
-                margin: 5px 4px;
-            }
-
-            .logo-text {
-                font-size: 18px;
-            }
-
-            .title {
-                font-size: 24px;
-            }
-
-            .name-box {
-                font-size: 18px;
-            }
-
-            .container {
-                padding: 18px;
-            }
-        }
-    </style>
+    }
+</style>
 </head>
+
 <body>
-
-<header>
-    <div class="logo-box">
-        <img src="https://raw.githubusercontent.com/crueliti1/crueliti-s/main/9541cc3fcd847f455b1885a7acd7f182.jpg" alt="logo">
-        <div class="logo-text">MatveyCrueliti</div>
-    </div>
-
-    <div style="display:flex; align-items:center; flex-wrap:wrap; justify-content:center;">
-        <a class="funpay-btn" href="https://funpay.com/users/234497/" target="_blank">Профиль FunPay</a>
-
-        <a class="lang-btn" href="#" onclick="setLang('ru')">🇷🇺 Русский</a>
-        <a class="lang-btn" href="#" onclick="setLang('en')">🇺🇸 English</a>
-    </div>
-</header>
-
 <div class="container">
 
-    <div class="title-wrapper">
-        <div class="title" data-ru="Инструкция продавца" data-en="Seller Instructions">Инструкция продавца</div>
-        <div class="name-box">MatveyCrueliti</div>
+    <a class="profile-btn" href="#">Мой профиль</a>
+
+    <div class="lang-switch">
+        <div class="lang-btn" onclick="setLang('ru')">RU</div>
+        <div class="lang-btn" onclick="setLang('en')">EN</div>
     </div>
 
-    <div class="warning"
-         data-ru="ВНИМАНИЕ, ЕСЛИ НА ТВИЧЕ НЕТ НАГРАД, ЭТО НЕ ЗНАЧИТ ЧТО ИХ НЕТ ВОВСЕ!
-У ТВИЧА СТРОГИЕ ПРАВИЛА: ЕСЛИ НАГРАДА БЫЛА ПОЛУЧЕНА БОЛЕЕ 6 МЕСЯЦЕВ НАЗАД —
-ЕЁ ВИЗУАЛЬНО СКРЫВАЮТ, НО ОНА ВСЁ РАВНО ЕСТЬ!
-НЕ ПИШИТЕ ЧТО НАГРАДЫ НЕТ И НЕ ПОРТИТЕ РЕЙТИНГ ПРОДАВЦА!
-ИНАЧЕ В ОБСЛУЖИВАНИИ БУДЕТ ОТКАЗАНО. УВАЖАЙТЕ ЧУЖОЙ ТРУД!"
-         data-en="WARNING: IF THERE ARE NO REWARDS ON TWITCH, IT DOES NOT MEAN THEY DON'T EXIST!
-TWITCH HAS STRICT RULES: IF A REWARD WAS RECEIVED MORE THAN 6 MONTHS AGO,
-IT IS HIDDEN VISUALLY BUT STILL EXISTS!
-DO NOT CLAIM THERE ARE NO REWARDS AND DO NOT DAMAGE THE SELLER'S RATING!
-SERVICE MAY BE REFUSED. RESPECT OTHER PEOPLE’S WORK!">
-        ВНИМАНИЕ, ЕСЛИ НА ТВИЧЕ НЕТ НАГРАД, ЭТО НЕ ЗНАЧИТ ЧТО ИХ НЕТ ВОВСЕ!
+    <h1 data-ru="Инструкция продавца" data-en="Seller Instructions">Инструкция продавца</h1>
+
+    <div class="warning-red" 
+         data-ru="ВНИМАНИЕ, ЕСЛИ НА ТВИЧЕ НЕТ НАГРАД..."
+         data-en="ATTENTION, IF THERE ARE NO REWARDS ON TWITCH...">
+         ВНИМАНИЕ, ЕСЛИ НА ТВИЧЕ НЕТ НАГРАД, ЭТО НЕ ЗНАЧИТ ЧТО ИХ НЕТ ВОВСЕ!
     </div>
-
-    <p data-ru="Добро пожаловать на инструкцию продавца MatveyCrueliti!"
-       data-en="Welcome to the seller instructions of MatveyCrueliti!">
-       Добро пожаловать на инструкцию продавца MatveyCrueliti!
-    </p>
-
-    <p data-ru="Вам выдали данные от Twitch аккаунта. Переходим на сайт:"
-       data-en="You received Twitch account details. Go to the website:">
-        Вам выдали данные от Twitch аккаунта. Переходим на сайт:
-        <a href="https://www.twitch.tv/" target="_blank">https://www.twitch.tv/</a>
-    </p>
-
-    <p data-ru="Авторизация по данным — вводим логин и пароль, которые вы получили при покупке."
-       data-en="Log in using the username and password you received after purchase.">
-       Авторизация по данным — вводим логин и пароль, которые вы получили при покупке.
-    </p>
-
-    <img class="guide-img" src="https://raw.githubusercontent.com/crueliti1/crueliti-s/main/a1.jpg" alt="Авторизация">
-
-    <p data-ru="Если у вас выскакивает окно подтверждения почты с кодом — нажмите «Напомнить позже» или закройте окно по крестику."
-       data-en="If a window pops up asking you to verify your email with a code — click “Remind me later” or close it with the X button.">
-       Если у вас выскакивает окно подтверждения почты с кодом — нажмите «Напомнить позже» или закройте окно по крестику.
-    </p>
-
-    <img class="guide-img" src="https://raw.githubusercontent.com/crueliti1/crueliti-s/main/4.jpg" alt="Email confirmation">
-
-    <p data-ru="Далее переходим на страницу дропов:"
-       data-en="Next, go to the drops page:">
-        Далее переходим на страницу дропов:
-        <a href="https://www.twitch.tv/drops/inventory" target="_blank">https://www.twitch.tv/drops/inventory</a>
-    </p>
-
-    <p data-ru="Под любой нужной наградой нажимаем кнопку «Подключить»."
-       data-en="Under any desired reward, click the “Connect” button.">
-       Под любой нужной наградой нажимаем кнопку «Подключить».
-    </p>
-
-    <img class="guide-img" src="https://raw.githubusercontent.com/crueliti1/crueliti-s/main/a2.jpg" alt="Drops">
 
     <p data-ru="Вас перебрасывает на страницу подключения — следуйте шагам."
-       data-en="You will be redirected to the linking page — follow the steps.">
+       data-en="You will be redirected to the connection page — follow the steps.">
        Вас перебрасывает на страницу подключения — следуйте шагам.
     </p>
 
     <p data-ru="Готово! Теперь ожидайте наград в игре."
-       data-en="Done! Now wait for the rewards to appear in the game.">
+       data-en="Done! Now wait for the rewards in the game.">
        Готово! Теперь ожидайте наград в игре.
     </p>
 
-    <!-- 🔥 RED BORDER BLOCK -->
-    <div class="info-block info-block-red-fixed" data-lang="ru">
-        Если вы перешли в инвентарь и в нем не отображаются награды и нет кнопки подключить, это не значит что наград нет, просто Twitch скрыл их визуально, по их правилам награды отображаются на сайте, только если им меньше 6 месяцев.<br><br>
+    <!-- ——————— НОВЫЙ БЛОК №1 ——————— -->
+    <div class="purple-box"
+         data-ru="Если вы перешли в инвентарь..."
+         data-en="If you opened your inventory and rewards are not displayed...">
+        Если вы перешли в инвентарь и в нем не отображаются награды и нет кнопки подключить, это не значит что наград нет, просто Twitch скрыл их визуально, по их правилам награды отображаются на сайте, только если им меньше 6 месяцев.
+        <br><br>
         Вам нужно перейти на официальный сайт ИГРЫ, для которой вы купили Drops, и на официальном сайте найти подключение профиля к твичу. Если вы не справились, вы всегда можете обратиться за помощью ко мне, и я всегда помогу.
     </div>
 
-    <div class="info-block info-block-red-fixed" data-lang="en" style="display:none;">
-        If you went to your inventory and rewards are not displayed and there is no “Connect” button, it does NOT mean there are no rewards — Twitch simply hides them visually. According to their rules, rewards are shown on the website only if they are less than 6 months old.<br><br>
-        You need to go to the official website of the GAME for which you purchased the Drops, and on the site find the Twitch linking section. If you cannot handle it, you can always contact me, and I will help you.
+    <!-- ——————— НОВЫЙ БЛОК №2 — картинка ——————— -->
+    <div style="text-align:center; margin-top:20px;">
+        <img src="https://raw.githubusercontent.com/crueliti1/crueliti-s/main/4.jpg"
+             style="width:100%; border-radius:12px;">
     </div>
 
-    <div class="info-block"
-         data-ru="Абсолютно все товары безопасны..."
-         data-en="All products are completely safe...">
-        Абсолютно все товары безопасны к использованию и за них НЕ может быть наложено внутриигровых санкций на ваш аккаунт, это просто привязка твича.
+    <!-- ——————— 4 БЛОКА С ТЕКСТОМ (ИСПРАВЛЕННЫЕ) ——————— -->
+
+    <div class="info-block">
+        Абсолютно все товары безопасны к использованию и за них НЕ может быть наложено внутриигровых санкций…
     </div>
 
-    <div class="info-block"
-         data-ru="При попытке обмана продавца..."
-         data-en="If you attempt to deceive the seller...">
-        При попытке обмана продавца или попытке занизить отзыв — вы будете добавлены в Чёрный Список.
+    <div class="info-block">
+        При попытке обмана продавца… вы будете добавлены в Чёрный Список…
     </div>
 
-    <div class="info-block"
-         data-ru="Если у вас возникли проблемы..."
-         data-en="If you encounter any problems...">
-        Если у вас возникли какие-то проблемы, вызовите продавца и дождитесь.
+    <div class="info-block">
+        Если у вас возникли проблемы — вызовите продавца и дождитесь…
     </div>
 
-    <div class="info-block"
-         data-ru="Аккаунты выдаются в одни руки..."
-         data-en="Each account is issued to one person...">
-        Аккаунты выдаются в одни руки. После покупки твич-аккаунт остаётся вашим навсегда.
+    <div class="info-block">
+        Аккаунты выдаются в одни руки… НЕ ПЫТАЙТЕСЬ ОБМАНУТЬ ПРОДАВЦА!!!
     </div>
 
 </div>
 
 <script>
 function setLang(lang) {
-    document.documentElement.lang = lang;
-
-    document.querySelectorAll("[data-ru]").forEach(el => {
+    document.querySelectorAll("[data-" + lang + "]").forEach(el => {
         el.innerHTML = el.getAttribute("data-" + lang);
     });
-
-    document.querySelectorAll("[data-lang]").forEach(el => {
-        el.style.display = el.getAttribute("data-lang") === lang ? "" : "none";
-    });
 }
-
-window.onload = () => setLang('ru');
 </script>
 
 </body>
