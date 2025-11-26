@@ -123,22 +123,20 @@
             color: #f2f2ff;
             border: 1px solid #6d59c9;
             box-shadow: 0 0 10px rgba(125, 91, 255, 0.25);
-
             white-space: normal;
             word-wrap: break-word;
             overflow-wrap: break-word;
         }
 
-        /* ----- красная рамка для первого блока ----- */
-        .info-block--red {
-            border: 2px solid #a30000;                    /* красная обводка */
-            box-shadow: 0 6px 18px rgba(163,0,0,0.18);    /* легкое красное свечение */
-            background: linear-gradient(180deg, #3a2a73 0%, #35245f 100%); /* оставил фирменный фон */
+        /* ----- FORCED RED BORDER FIX ----- */
+        .info-block-red-fixed {
+            border: 3px solid #ff0000 !important;
+            box-shadow: 0 0 22px rgba(255, 0, 0, 0.55) !important;
+            background: #311d55 !important;
         }
 
-        /* 📱 Мобильная адаптация + фикс кнопок */
+        /* 📱 Мобильная адаптация */
         @media (max-width: 480px) {
-
             header {
                 flex-direction: column;
                 gap: 10px;
@@ -151,7 +149,6 @@
                 margin-left: 0;
             }
 
-            /* 🔥 ФИКС — кнопки не наезжают друг на друга */
             header div:last-child a {
                 margin: 5px 4px;
             }
@@ -227,18 +224,15 @@ SERVICE MAY BE REFUSED. RESPECT OTHER PEOPLE’S WORK!">
        Авторизация по данным — вводим логин и пароль, которые вы получили при покупке.
     </p>
 
-    <!-- ПЕРВАЯ КАРТИНКА (уже была) -->
     <img class="guide-img" src="https://raw.githubusercontent.com/crueliti1/crueliti-s/main/a1.jpg" alt="Авторизация">
 
-    <!-- --- НОВЫЙ БЛОК: текст с переводом и картинка 4.jpg --- -->
     <p data-ru="Если у вас выскакивает окно подтверждения почты с кодом — нажмите «Напомнить позже» или закройте окно по крестику."
-       data-en="If a window pops up asking you to verify your email with a code — click “Remind me later” or close the window using the X button.">
+       data-en="If a window pops up asking you to verify your email with a code — click “Remind me later” or close it with the X button.">
        Если у вас выскакивает окно подтверждения почты с кодом — нажмите «Напомнить позже» или закройте окно по крестику.
     </p>
 
     <img class="guide-img" src="https://raw.githubusercontent.com/crueliti1/crueliti-s/main/4.jpg" alt="Email confirmation">
 
-    <!-- Далее существующий текст (страница дропов и т.д.) -->
     <p data-ru="Далее переходим на страницу дропов:"
        data-en="Next, go to the drops page:">
         Далее переходим на страницу дропов:
@@ -261,41 +255,40 @@ SERVICE MAY BE REFUSED. RESPECT OTHER PEOPLE’S WORK!">
        data-en="Done! Now wait for the rewards to appear in the game.">
        Готово! Теперь ожидайте наград в игре.
     </p>
-    
-    <!-- ========== ПЕРВЫЙ (КРАСНЫЙ) БЛОК (РУ / EN) ========== -->
-    <div class="info-block info-block--red" data-lang="ru">
+
+    <!-- 🔥 RED BORDER BLOCK -->
+    <div class="info-block info-block-red-fixed" data-lang="ru">
         Если вы перешли в инвентарь и в нем не отображаются награды и нет кнопки подключить, это не значит что наград нет, просто Twitch скрыл их визуально, по их правилам награды отображаются на сайте, только если им меньше 6 месяцев.<br><br>
         Вам нужно перейти на официальный сайт ИГРЫ, для которой вы купили Drops, и на официальном сайте найти подключение профиля к твичу. Если вы не справились, вы всегда можете обратиться за помощью ко мне, и я всегда помогу.
     </div>
 
-    <div class="info-block info-block--red" data-lang="en" style="display:none;">
+    <div class="info-block info-block-red-fixed" data-lang="en" style="display:none;">
         If you went to your inventory and rewards are not displayed and there is no “Connect” button, it does NOT mean there are no rewards — Twitch simply hides them visually. According to their rules, rewards are shown on the website only if they are less than 6 months old.<br><br>
-        You need to go to the official website of the GAME for which you purchased the Drops, and on the official site find the profile connection to Twitch. If you cannot handle it, you can always contact me for help, and I will assist you.
+        You need to go to the official website of the GAME for which you purchased the Drops, and on the site find the Twitch linking section. If you cannot handle it, you can always contact me, and I will help you.
     </div>
 
-    <!-- остальные блоки -->
     <div class="info-block"
-         data-ru="Абсолютно все товары безопасны к использованию и за них НЕ может быть наложено внутриигровых санкций на ваш аккаунт, это просто привязка твича."
-         data-en="All products are completely safe to use and cannot result in any in-game sanctions on your account. It is simply a Twitch linking process.">
+         data-ru="Абсолютно все товары безопасны..."
+         data-en="All products are completely safe...">
         Абсолютно все товары безопасны к использованию и за них НЕ может быть наложено внутриигровых санкций на ваш аккаунт, это просто привязка твича.
     </div>
 
     <div class="info-block"
-         data-ru="При попытке обмана продавца или попытке занизить отзыв из-за собственной невнимательности, вранья или личной выгоды — вы будете добавлены в Чёрный Список. Все предметы, полученные вами с TWITCH аккаунта, будут откачены поддержкой твича. Подумайте дважды! Также вам будет полностью отказано в дальнейшем обслуживании."
-         data-en="If you attempt to deceive the seller or leave a lowered review due to your own inattention, dishonesty, or personal benefit — you will be added to the Blacklist. All items obtained from the TWITCH account will be revoked by Twitch support. Think twice! Further service will also be refused.">
-        При попытке обмана продавца или попытке занизить отзыв из-за собственной невнимательности, вранья или личной выгоды — вы будете добавлены в Чёрный Список. Все предметы, полученные вами с TWITCH аккаунта, будут откачены поддержкой твича. Подумайте дважды! Также вам будет полностью отказано в дальнейшем обслуживании.
+         data-ru="При попытке обмана продавца..."
+         data-en="If you attempt to deceive the seller...">
+        При попытке обмана продавца или попытке занизить отзыв — вы будете добавлены в Чёрный Список.
     </div>
 
     <div class="info-block"
-         data-ru="Если у вас возникли какие-то проблемы, вызовите продавца и дождитесь — не нужно сразу писать негативный отзыв или в поддержку. В 99% случаев проблемы возникают из-за невнимательности к инструкции. Прочитайте всё внимательно. Если вопросы остались — спросите."
-         data-en="If you encounter any problems, call the seller and wait — do not rush to leave a negative review or contact support. In 99% of cases, issues occur due to ignoring the instructions. Read everything carefully. If you still have questions — ask.">
-        Если у вас возникли какие-то проблемы, вызовите продавца и дождитесь — не нужно сразу писать негативный отзыв или в поддержку. В 99% случаев проблемы возникают из-за невнимательности к инструкции. Прочитайте всё внимательно. Если вопросы остались — спросите.
+         data-ru="Если у вас возникли проблемы..."
+         data-en="If you encounter any problems...">
+        Если у вас возникли какие-то проблемы, вызовите продавца и дождитесь.
     </div>
 
     <div class="info-block"
-         data-ru="Аккаунты выдаются в одни руки. Все они разные и не повторяются. После покупки твич-аккаунт остаётся вашим навсегда. ДА, КАЖДЫЙ ТВИЧ — КАЖДОМУ ПОКУПАТЕЛЮ! НЕ пытайтесь обмануть продавца фразой «Уже кто-то залутал награды». Такого быть НЕ может!"
-         data-en="Each account is issued to only one person. All accounts are unique and never repeated. After purchase, the Twitch account is yours forever. YES — EACH TWITCH FOR EACH BUYER! Do NOT try to deceive the seller with claims like “Someone already claimed the rewards”. This is NOT possible!">
-        Аккаунты выдаются в одни руки. Все они разные и не повторяются. После покупки твич-аккаунт остаётся вашим навсегда. ДА, КАЖДЫЙ ТВИЧ — КАЖДОМУ ПОКУПАТЕЛЮ! НЕ пытайтесь обмануть продавца фразой «Уже кто-то залутал награды». Такого быть НЕ может!
+         data-ru="Аккаунты выдаются в одни руки..."
+         data-en="Each account is issued to one person...">
+        Аккаунты выдаются в одни руки. После покупки твич-аккаунт остаётся вашим навсегда.
     </div>
 
 </div>
@@ -303,16 +296,13 @@ SERVICE MAY BE REFUSED. RESPECT OTHER PEOPLE’S WORK!">
 <script>
 function setLang(lang) {
     document.documentElement.lang = lang;
+
     document.querySelectorAll("[data-ru]").forEach(el => {
         el.innerHTML = el.getAttribute("data-" + lang);
     });
 
-    /* Обрабатываем блоки с data-lang (если они используются) — переключим их видимость,
-       чтобы старые data-lang-div-ы также работали, если они есть в документе. */
     document.querySelectorAll("[data-lang]").forEach(el => {
-        const L = el.getAttribute("data-lang");
-        if (L === lang) el.style.display = "block";
-        else el.style.display = "none";
+        el.style.display = el.getAttribute("data-lang") === lang ? "" : "none";
     });
 }
 
