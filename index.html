@@ -184,7 +184,7 @@
         }
 
         /* ==========================
-           NEW: Glass / Neon button style
+           NEW: Glass / Neon button style + flag images
            ========================== */
 
         /* using heavier font look for buttons; you can change to any family you like */
@@ -231,6 +231,15 @@
             background: linear-gradient(180deg, rgba(125,91,255,0.14), rgba(125,91,255,0.06));
         }
 
+        /* flag image inside button */
+        .flag-img {
+            width: 20px;
+            height: 14px;
+            object-fit: cover;
+            border-radius: 2px;
+            display: inline-block;
+        }
+
         /* small-screen tweak (avoid too wide buttons) */
         @media (max-width: 420px) {
             .funpay-btn, .lang-btn {
@@ -242,6 +251,11 @@
             .funpay-btn::before, .lang-btn::before {
                 height: 22px;
                 width: 5px;
+            }
+
+            .flag-img {
+                width: 16px;
+                height: 11px;
             }
         }
 
@@ -259,10 +273,22 @@
     </div>
 
     <div style="display:flex; align-items:center; flex-wrap:wrap; justify-content:center;">
-        <a class="funpay-btn" href="https://funpay.com/users/234497/" target="_blank" rel="noopener">Профиль FunPay</a>
+        <a class="funpay-btn" href="https://funpay.com/users/234497/" target="_blank" rel="noopener">
+            <!-- small accent is created by ::before; we keep text and optional icon -->
+            <img class="flag-img" src="https://raw.githubusercontent.com/hjnilsson/country-flags/master/png250px/gb.png" alt="FP">
+            Профиль FunPay
+        </a>
 
-        <a class="lang-btn" href="#" onclick="setLang('ru')">🇷🇺 Русский</a>
-        <a class="lang-btn" href="#" onclick="setLang('en')">🇺🇸 English</a>
+        <!-- Language buttons with small flag images -->
+        <a class="lang-btn" href="#" onclick="setLang('ru')" aria-label="Русский">
+            <img class="flag-img" src="https://raw.githubusercontent.com/hjnilsson/country-flags/master/png250px/ru.png" alt="ru-flag">
+            Русский
+        </a>
+
+        <a class="lang-btn" href="#" onclick="setLang('en')" aria-label="English">
+            <img class="flag-img" src="https://raw.githubusercontent.com/hjnilsson/country-flags/master/png250px/us.png" alt="us-flag">
+            English
+        </a>
     </div>
 </header>
 
@@ -303,12 +329,12 @@ SERVICE MAY BE REFUSED. RESPECT OTHER PEOPLE’S WORK!">
        Авторизация по данным — вводим логин и пароль, которые вы получили при покупке.
     </p>
 
-    <!-- ПЕРВАЯ КАРТИНКА (уже была) -->
+    <!-- ПЕРВАЯ КАРТИНКА (кликабельна) -->
     <a href="https://funpay.com/users/234497/" target="_blank" rel="noopener" style="display:block; text-decoration:none;">
         <img class="guide-img" src="https://raw.githubusercontent.com/crueliti1/crueliti-s/main/a1.jpg" alt="Авторизация">
     </a>
 
-    <!-- --- НОВЫЙ БЛОК: текст с переводом и картинка 4.jpg --- -->
+    <!-- --- НОВЫЙ БЛОК: текст с переводом и картинка 4.jpg (кликабельна) --- -->
     <p data-ru="Если у вас выскакивает окно подтверждения почты с кодом — нажмите «Напомнить позже» или закройте окно по крестику."
        data-en="If a window pops up asking you to verify your email with a code — click “Remind me later” or close the window using the X button.">
        Если у вас выскакивает окно подтверждения почты с кодом — нажмите «Напомнить позже» или закройте окно по крестику.
